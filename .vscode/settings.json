@@ -7,7 +7,10 @@
 {
   // Mistype Check
   // Recommend to install "code-spell-checker"
-  "cSpell.words": ["echoscript", "echoscriptrc"],
+  "cSpell.words": [
+    "echoscript",
+    "echoscriptrc",
+  ],
 
   // Snippet Recommandation
   // Turn on for License

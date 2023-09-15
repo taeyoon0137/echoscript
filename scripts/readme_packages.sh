@@ -13,24 +13,50 @@ ROOT_DIR="$SCRIPT_DIR/.."
 # Define Resource Paths
 README_DIR="$ROOT_DIR/README.md"
 BAK_README_DIR="$ROOT_DIR/README.md.bak"
+PACKAGES_DIR="$ROOT_DIR/packages"
+
 
 # 빈 문자열을 변수에 초기화
 markdown_table=""
-markdown_table+="| Package Name | Version |\n"
-markdown_table+="|--------------|---------|\n"
+markdown_table+="| Package Name | Descripton | Version |\n"
+markdown_table+="|:-------------|:-----------|:-------:|\n"
 
-# 현재 디렉토리에서 모든 package.json 파일을 찾아서 name과 version을 추출
-# 루트의 package.json은 제외
-find . -mindepth 2 -name "package.json" -type f | while read -r file; do
+# Set find command depends on OS
+FIND_COMMAND="find"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # Check is findutils installed
+    $SCRIPT_DIR/utils/install_findutils.sh
+
+    # Set command as gfind
+    if command -v gfind &>/dev/null; then
+        FIND_COMMAND="gfind"
+    fi
+fi
+
+# Set realpath command depends on OS
+REALPATH_COMMAND="realpath"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # Check is coreutils installed
+    $SCRIPT_DIR/utils/install_coreutils.sh
+
+    if command -v grealpath &>/dev/null; then
+        REALPATH_COMMAND="grealpath"
+    fi
+fi
+
+# Extract name and version from each package.json
+# Except root package.json
+while read -r file; do
     name=$(jq -r ".name" "$file")
     version=$(jq -r ".version" "$file")
+    description=$(jq -r ".description" "$file")
+    temp_path=$($REALPATH_COMMAND --relative-to="$README_DIR" "$file")
+    file_path=$(echo "$temp_path" | sed -e 's/.././' -e 's/\/package.json//')
+    markdown_table+="| [$name]($file_path) | $description | \`$version\` |\n"
+done < <($FIND_COMMAND $PACKAGES_DIR -mindepth 2 -name "package.json" -type f)
 
-    # 결과를 변수에 마크다운 표 형태로 추가
-    markdown_table+="| $name | $version |\n"
-done
+# Replace ${package_list} to generated table from README.md
+sed -i.bak "s#\${package_list}#$markdown_table#g" $README_DIR
 
-# README.md 파일의 ${package_list} 부분을 생성한 표로 교체
-sed -i.bak "s/\${package_list}/$markdown_table/g" $README_DIR
-
-# 백업 파일 삭제 (macOS와 Linux 모두에서 동작하기 위해 .bak 확장자 사용)
+# Remove Backup
 rm -f $README_DIR.bak

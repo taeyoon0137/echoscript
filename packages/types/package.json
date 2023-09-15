@@ -1,0 +1,8 @@
+{
+  "name": "@echoscript/types",
+  "description": "Type definition for Echoscript.",
+  "version": "0.0.0-alpha",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

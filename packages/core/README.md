@@ -1,0 +1,1 @@
+# @echoscript/core
