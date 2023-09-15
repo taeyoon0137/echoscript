@@ -1,0 +1,22 @@
+{
+  "name": "echoscript",
+  "description": "Echo for every script. For safety.",
+  "version": "1.0.0-alpha",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "https://github.com/taeyoon0137/echoscript.git",
+  "author": "Taeyoon Lee <taeyoon0137@gmail.com>",
+  "packageManager": "yarn@3.6.3",
+  "scripts": {
+    "vscode": "yarn dlx @yarnpkg/sdks vscode"
+  },
+  "devDependencies": {
+    "@lerna-lite/cli": "2.5.1",
+    "@types/node": "^20.6.0",
+    "typescript": "^5.2.2",
+    "zod": "^3.22.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

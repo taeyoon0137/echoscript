@@ -1,0 +1,46 @@
+/**
+ * Copyright 2023 Taeyoon Lee. All Right Reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ES6",
+    "lib": ["ES6", "DOM", "ES2016", "ES2017", "ESNext"],
+    "jsx": "react",
+
+    /* Modules */
+    "module": "CommonJS",
+    "moduleResolution": "node",
+
+    /* Emit */
+    "declaration": true,
+    "removeComments": false,
+    "sourceMap": true,
+    
+    /* Interop Constraints */
+    "allowSyntheticDefaultImports": true,
+    
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": false,
+
+    /* Type Checking */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+
+    /* Advanced Options */
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+  },
+  "exclude": ["node_modules"]
+}

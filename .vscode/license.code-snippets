@@ -1,0 +1,45 @@
+{
+  "[TS/JS] MIT License": {
+    "prefix": ["lc", "mit"],
+    "description": "Enter License Memo",
+    "body": [
+      "/**",
+      " * Copyright $CURRENT_YEAR Taeyoon Lee. All Right Reserved.",
+      " *",
+      " * This source code is licensed under the MIT license found in the",
+      " * LICENSE file in the root directory of this source tree.",
+      " */",
+      "",
+      ""
+    ],
+    "scope": "javascript, typescript, json, jsonc"
+  },
+  "[XML] MIT License": {
+    "prefix": ["lc", "mit"],
+    "description": "Enter License Memo",
+    "body": [
+      "<!--",
+      "  Copyright $CURRENT_YEAR Taeyoon Lee. All Right Reserved.",
+      "",
+      "  This source code is licensed under the MIT license found in the",
+      "  LICENSE file in the root directory of this source tree.",
+      "-->",
+      "",
+      ""
+    ],
+    "scope": "xml, html, markdown"
+  },
+  "[PLAIN] MIT License": {
+    "prefix": ["lc", "mit"],
+    "description": "Enter License Memo",
+    "body": [
+      "# Copyright $CURRENT_YEAR Taeyoon Lee. All Right Reserved.",
+      "#",
+      "# This source code is licensed under the MIT license found in the",
+      "# LICENSE file in the root directory of this source tree.",
+      "",
+      ""
+    ],
+    "scope": "plain, yaml"
+  }
+}
