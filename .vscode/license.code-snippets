@@ -40,6 +40,6 @@
       "",
       ""
     ],
-    "scope": "plain, yaml"
+    "scope": "plain, yaml, shellscript"
   }
 }
