@@ -9,7 +9,7 @@
 if command -v jq &>/dev/null; then
     # When jq already installed
     # Don't do anything
-    echo ""
+    :
 else
     # When jq not installed    
     echo "jq is not installed. Installing..."

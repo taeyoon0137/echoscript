@@ -1,0 +1,9 @@
+{
+  "name": "@echoscript/yarn-plugin",
+  "description": "Run echoscript via yarn plugin.",
+  "version": "0.0.0-alpha",
+  "devDependencies": {
+    "@yarnpkg/core": "^4.0.0-rc.50",
+    "typescript": "^5.2.2"
+  }
+}

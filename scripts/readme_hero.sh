@@ -10,22 +10,18 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$SCRIPT_DIR/.."
 
 # Define Resource Paths
-PACKAGE_JSON_DIR="$ROOT_DIR/package.json"
+HERO_DIR="$ROOT_DIR/resources/assets/img_echoscript_hero.png"
 README_DIR="$ROOT_DIR/README.md"
-PRESET_README_DIR="$ROOT_DIR/resource/README.preset.md"
 BAK_README_DIR="$ROOT_DIR/README.md.bak"
-
-# Check is jq installed
-$SCRIPT_DIR/utils/install_jq.sh
 
 # Import encode_url
 source $SCRIPT_DIR/utils/encode_url.sh
 
-# Get version info from lerna.json
-VERSION=$(jq -r '.version' $PACKAGE_JSON_DIR)
+# Encode Hero Image to Base64
+ENCODED_HERO=$(base64 < $HERO_DIR)
 
-# Update version to package.tmp.json
-sed "s/\${version}/$(encode_url "$VERSION")/g" $README_DIR > $BAK_README_DIR
+# Inject Symbol into TEMP README
+sed "s|\${hero}|data:image/png;base64,$(encode_url "$ENCODED_HERO")|g" $README_DIR > $BAK_README_DIR
 
 # Override README via TEMP README
 mv $BAK_README_DIR $README_DIR

@@ -11,6 +11,14 @@
   If changes are needed, please modify the resource/README.preset.md file.
 -->
 
+<!-- Hero Image -->
+<p align="center">
+  <a href="https://github.com/taeyoon0137/echoscript.git">
+    <img src="${hero}" alt="Echoscript Title Image" style=" width: calc(100% + 16px); margin-left: -8px; margin-right: -8px; overflow: hidden; object-fit: cover; " />
+  </a>
+</p>
+
+<!-- Title -->
 <h1 align="center">Echoscript</h1>
 <p align="center">Echo for every script. For safety.</p>
 
@@ -41,5 +49,9 @@
     <img src="https://img.shields.io/badge/visual%20studio%20code-%23007ACC?&logo=visual%20studio%20code&logoColor=%23FFFFFF" />
   </a>
 </p>
+
+## 📦 Packages
+
+> Current recent version is `${version}`
 
 ${package_list}
