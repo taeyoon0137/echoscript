@@ -1,14 +1,20 @@
 {
   "name": "echoscript",
   "description": "Echo for every script. For safety.",
-  "version": "1.0.0-alpha",
+  "version": "0.0.0-alpha",
   "license": "MIT",
   "main": "index.js",
   "repository": "https://github.com/taeyoon0137/echoscript.git",
   "author": "Taeyoon Lee <taeyoon0137@gmail.com>",
   "packageManager": "yarn@3.6.3",
   "scripts": {
-    "vscode": "yarn dlx @yarnpkg/sdks vscode"
+    "vscode": "yarn dlx @yarnpkg/sdks vscode",
+    "sync:version": "./scripts/version.sh",
+    "readme": "yarn readme:create && yarn readme:symbol && yarn readme:version && yarn readme:packages",
+    "readme:create": "./scripts/readme_create.sh",
+    "readme:packages": "./scripts/readme_packages.sh",
+    "readme:symbol": "./scripts/readme_symbol.sh",
+    "readme:version": "./scripts/readme_version.sh"
   },
   "devDependencies": {
     "@lerna-lite/cli": "2.5.1",
