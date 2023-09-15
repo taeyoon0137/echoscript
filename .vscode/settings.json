@@ -1,0 +1,54 @@
+/**
+ * Copyright 2023 Taeyoon Lee. All Right Reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+{
+  // Mistype Check
+  // Recommend to install "code-spell-checker"
+  "cSpell.words": ["echoscript", "echoscriptrc"],
+
+  // Snippet Recommandation
+  // Turn on for License
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": true
+    }
+  },
+
+  // Hide Useless Files
+  // Recommend to install "Hide Node Modules"
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true
+  },
+
+  // Chagne Folder/File Icon
+  // Recommend to install "Material Icon Theme"
+  "material-icon-theme.files.associations": {
+    "*.type.ts": "typescript-def",
+    "settings.json": "settings",
+    "extensions.json": "settings",
+    ".pnp.cjs": "yarn",
+    ".pnp.loader.mjs": "yarn"
+  },
+
+  // Exclude cache file from search
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+
+  // Yarn pnp typescript path definition
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}
