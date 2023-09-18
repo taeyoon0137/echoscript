@@ -50,6 +50,47 @@
   </a>
 </p>
 
+- [🔥 Getting Started](#-getting-started)
+- [⚙️ Configuration](#️-configuration)
+  - [.echoscriptrc](#echoscriptrc)
+- [📦 Packages](#-packages)
+
+## 🔥 Getting Started
+
+Echoscript is a yarn plugin that logs each time an npm script runs, allowing users to clearly discern how far it has executed or where an error might have occurred.
+
+You can install this plugin using the following command:
+
+```shell
+yarn plugin import https://raw.githubusercontent.com/taeyoon0137/echoscript/main/packages/yarn/plugin/bundle.js
+```
+
+After installing the plugin, if you run any command via script, you'll be able to see an echo as demonstrated below!
+
+![Echoscript Preview](${preview})
+
+## ⚙️ Configuration
+
+![Echoscript Structure](${structure})
+
+The structure of Echoscript is divided into Root Project, Project, Script, Subscript, and Message.
+
+Initially, the Root Project is provided with the string `"ECHO"`, but it can be modified through the `.echoscriptrc` file. The Project displays the `"name"` value of the package where the script runs, while Script and Subscript show the name of the executing script. If the Script contains a `":"`, it's recognized and differentiated as a Subscript based on this.
+
+Messages typically occur when a script starts or finishes execution. However, more instances are planned to be added in the future.
+
+### .echoscriptrc
+
+Echoscript allows you to configure the plugin through a JSON-formatted .echoscriptrc file located in the project's root path.
+
+For easy configuration, a predefined JSON schema can be used as follows:
+
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/taeyoon0137/echoscript/main/packages/types/schema/echoscriptrc.schema.json"
+}
+```
+
 ## 📦 Packages
 
 > Current recent version is `${version}`
