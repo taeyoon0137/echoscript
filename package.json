@@ -1,7 +1,7 @@
 {
   "name": "echoscript",
   "description": "Echo for every script. For safety.",
-  "version": "0.0.0-alpha",
+  "version": "0.0.1-alpha.0",
   "license": "MIT",
   "workspaces": [
     "packages/*"
@@ -19,7 +19,8 @@
     "readme:symbol": "./scripts/readme_symbol.sh",
     "readme:version": "./scripts/readme_version.sh",
     "readme:format": "prettier --write \"./README.md\" --log-level silent",
-    "version": "yarn sync:version && yarn readme"
+    "version": "yarn readme",
+    "postversion": "Yarn sync:version"
   },
   "devDependencies": {
     "@lerna-lite/cli": "2.5.1",
