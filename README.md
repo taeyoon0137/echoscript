@@ -25,7 +25,7 @@
 <!-- Package Version -->
 <p align="center">
   <a href="https://github.com/taeyoon0137/echoscript.git">
-    <img src="https://img.shields.io/badge/0.1.1-%23101010?&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjM2NiIgdmlld0JveD0iMCAwIDUxMiAzNjYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik00ODggMzQxLjY3VjI4Ny43MzRIMzUwLjQwOVYyMDYuMDZINDc5Ljg1NVYxNTYuMDg3SDM1MC40MDlWNzcuOTM1N0g0ODhWMjRIMjg3LjY2OFYzNDEuNjdINDg4WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTI0IDQ2LjU0MjlWMTE1LjIyOEwxNjQuMjMzIDE4MC4xNzFWMTg0LjU3NEwyNCAyNDkuNTE3VjMxNy45ODJMMjI5LjE3NiAyMDkuMDFWMTU1LjczNUwyNCA0Ni41NDI5WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==&logoColor=%23FFFFFF&label=echoscript&labelColor=%231C1E9C" />
+    <img src="https://img.shields.io/badge/0.0.1--alpha.2.1-%23101010?&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjM2NiIgdmlld0JveD0iMCAwIDUxMiAzNjYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik00ODggMzQxLjY3VjI4Ny43MzRIMzUwLjQwOVYyMDYuMDZINDc5Ljg1NVYxNTYuMDg3SDM1MC40MDlWNzcuOTM1N0g0ODhWMjRIMjg3LjY2OFYzNDEuNjdINDg4WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTI0IDQ2LjU0MjlWMTE1LjIyOEwxNjQuMjMzIDE4MC4xNzFWMTg0LjU3NEwyNCAyNDkuNTE3VjMxNy45ODJMMjI5LjE3NiAyMDkuMDFWMTU1LjczNUwyNCA0Ni41NDI5WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==&logoColor=%23FFFFFF&label=echoscript&labelColor=%231C1E9C" />
   </a>
 </p>
 
@@ -93,7 +93,7 @@ For easy configuration, a predefined JSON schema can be used as follows:
 
 ## 📦 Packages
 
-> Current recent version is `0.1.1`
+> Current recent version is `0.0.1--alpha.2.1`
 
 | Package Name                                 | Descripton                      | Version |
 | :------------------------------------------- | :------------------------------ | :-----: |
