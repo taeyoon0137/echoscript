@@ -32,10 +32,11 @@
   // Recommend to install "Material Icon Theme"
   "material-icon-theme.files.associations": {
     "*.type.ts": "typescript-def",
-    "settings.json": "settings",
-    "extensions.json": "settings",
     ".pnp.cjs": "yarn",
-    ".pnp.loader.mjs": "yarn"
+    ".pnp.loader.mjs": "yarn",
+    ".echoscriptrc": "settings",
+    "extensions.json": "settings",
+    "settings.json": "settings"
   },
   // Exclude cache file from search
   "search.exclude": {
