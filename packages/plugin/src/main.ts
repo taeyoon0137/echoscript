@@ -8,6 +8,6 @@
 import { plugin } from './plugin';
 
 module.exports = {
-  name: `plugin-hello-world`,
+  name: `yarn-plugin-echoscript`,
   factory: (require: Function) => plugin(require),
 };
