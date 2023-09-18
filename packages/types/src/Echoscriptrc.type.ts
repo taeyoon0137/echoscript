@@ -21,9 +21,9 @@ export const Echoscriptrc = EchoscriptOptions.and(
      *
      * Name of Root project. Uses on monorepo-project.
      *
-     * @default "ECHO"
+     * @default "🔈"
      */
-    rootProject: z.string().min(1).optional().default('ECHO'),
+    rootProject: z.string().min(1).optional().default('🔈'),
 
     /**
      * ### Project Name
@@ -39,27 +39,27 @@ export const Echoscriptrc = EchoscriptOptions.and(
      *
      * Log text when script starts.
      *
-     * @default "Starting script..."
+     * @default "Starting script...🔥"
      */
-    start: z.string().min(1).optional().default('Starting script...'),
+    start: z.string().min(1).optional().default('Starting script...🔥'),
 
     /**
      * ### Error Log
      *
      * Log text when script returns error.
      *
-     * @default "Error occurred."
+     * @default "Error occurred ❌"
      */
-    error: z.string().min(1).optional().default('Error occurred.'),
+    error: z.string().min(1).optional().default('Error occurred ❌'),
 
     /**
      * ### End Log
      *
      * Log text when script ends.
      *
-     * @default "Script done"
+     * @default "Script done ✅"
      */
-    end: z.string().min(1).optional().default('Script done'),
+    end: z.string().min(1).optional().default('Script done ✅'),
   })
 );
 
