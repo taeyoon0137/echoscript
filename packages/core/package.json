@@ -19,6 +19,7 @@
   },
   "gitHead": "666f5bb6b39213db9fb8c6dd2f3f28413e7cce78",
   "dependencies": {
+    "@echoscript/types": "workspace:^",
     "chalk": "^5.3.0"
   }
 }
