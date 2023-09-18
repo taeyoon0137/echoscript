@@ -20,12 +20,12 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
   hooks: {
     wrapScriptExecution: async (executor, project, locator, scriptName, _extra) => {
       const config = loadRc(project.cwd, require);
-      const echo = echoscript(config.rootProject, getPackageName(), scriptName);
+      const echo = echoscript(config.rootProject, config.project ?? getPackageName(), scriptName);
       const log = (bracket: string, ...msg: string[]) => console.log(echo(bracket, msg.join(' ')));
       const err = (bracket: string, ...msg: string[]) => console.error(echo(bracket, msg.join(' ')));
 
       // Log start
-      log('┌', 'Starting script...');
+      log('┌', config.start);
 
       /**
        * Get package name with scope
@@ -51,11 +51,11 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
           if (exitCode !== 0) {
             err('└', `Script exited with code ${exitCode}`); // Log error
           } else {
-            log('└', `Script done`); // Log done
+            log('└', config.end); // Log done
           }
           return exitCode;
         } catch (error) {
-          err('└', `Error occurred. (${error})`); // Log error
+          err('└', `${config.error} (${error})`); // Log error
           throw error;
         }
       }

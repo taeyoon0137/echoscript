@@ -21,7 +21,7 @@ export function loadRc(rootPath: string, require: Function): Echoscriptrc {
 
   // When `.echoscriptrc` not exist
   if (!fs.existsSync(configPath)) {
-    return {};
+    return Echoscriptrc.parse({});
   }
 
   const configJson = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
@@ -29,7 +29,7 @@ export function loadRc(rootPath: string, require: Function): Echoscriptrc {
 
   // When `.echoscriptrc` format not correct
   if (!configParse.success) {
-    return {};
+    return Echoscriptrc.parse({});
   }
 
   return configParse.data;
