@@ -1,5 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/lerna-lite/lerna-lite/main/packages/cli/schemas/lerna-schema.json",
+  "npmClient": "yarn",
   "command": {
     "init": {
       "exact": true
