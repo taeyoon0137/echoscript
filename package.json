@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@lerna-lite/cli": "2.5.1",
+    "@lerna-lite/publish": "^2.5.1",
     "@total-typescript/ts-reset": "^0.5.1",
     "@types/node": "^20.6.0",
     "prettier": "^3.0.3",
