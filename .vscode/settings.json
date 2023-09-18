@@ -3,15 +3,10 @@
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */
-{
+ */ {
   // Mistype Check
   // Recommend to install "code-spell-checker"
-  "cSpell.words": [
-    "echoscript",
-    "echoscriptrc",
-  ],
-
+  "cSpell.words": ["echoscript", "echoscriptrc", "postversion"],
   // Snippet Recommandation
   // Turn on for License
   "editor.quickSuggestions": {
@@ -22,7 +17,6 @@
       "other": true
     }
   },
-
   // Hide Useless Files
   // Recommend to install "Hide Node Modules"
   "files.exclude": {
@@ -34,7 +28,6 @@
     "**/Thumbs.db": true,
     "**/node_modules": true
   },
-
   // Chagne Folder/File Icon
   // Recommend to install "Material Icon Theme"
   "material-icon-theme.files.associations": {
@@ -44,14 +37,13 @@
     ".pnp.cjs": "yarn",
     ".pnp.loader.mjs": "yarn"
   },
-
   // Exclude cache file from search
   "search.exclude": {
     "**/.yarn": true,
     "**/.pnp.*": true
   },
-
   // Yarn pnp typescript path definition
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
 }

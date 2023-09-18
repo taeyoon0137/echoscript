@@ -5,7 +5,4 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-declare module '*.json' {
-  const json: object;
-  export default json;
-}
+export * from './echoscript';
