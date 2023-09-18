@@ -5,9 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import fs from 'fs';
-import path from 'path';
-
 import { Echoscriptrc } from '@echoscript/types';
 
 /**
@@ -17,7 +14,9 @@ import { Echoscriptrc } from '@echoscript/types';
  * @param rootPath Path to the project root
  * @returns Custom echoscript config
  */
-export function loadRc(rootPath: string): Echoscriptrc {
+export function loadRc(rootPath: string, require: Function): Echoscriptrc {
+  const fs = require('fs');
+  const path = require('path');
   const configPath = path.resolve(rootPath, '.echoscriptrc');
 
   // When `.echoscriptrc` not exist
