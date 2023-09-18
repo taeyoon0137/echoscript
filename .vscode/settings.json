@@ -6,7 +6,7 @@
  */ {
   // Mistype Check
   // Recommend to install "code-spell-checker"
-  "cSpell.words": ["echoscript", "echoscriptrc", "postversion"],
+  "cSpell.words": ["echoscript", "echoscriptrc", "iife", "postversion"],
   // Snippet Recommandation
   // Turn on for License
   "editor.quickSuggestions": {
