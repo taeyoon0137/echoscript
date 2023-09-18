@@ -7,7 +7,7 @@
 
 import { plugin } from './plugin';
 
-export = {
+module.exports = {
   name: `plugin-hello-world`,
   factory: () => plugin,
 };
