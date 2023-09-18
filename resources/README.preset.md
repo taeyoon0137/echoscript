@@ -14,7 +14,7 @@
 <!-- Hero Image -->
 <p align="center">
   <a href="https://github.com/taeyoon0137/echoscript.git">
-    <img src="${hero}" alt="Echoscript Title Image" style=" width: calc(100% + 16px); margin-left: -8px; margin-right: -8px; overflow: hidden; object-fit: cover; " />
+    <img src="./assets/img_echoscript_hero.png" alt="Echoscript Title Image" style=" width: calc(100% + 16px); margin-left: -8px; margin-right: -8px; overflow: hidden; object-fit: cover; " />
   </a>
 </p>
 
@@ -67,11 +67,11 @@ yarn plugin import https://raw.githubusercontent.com/taeyoon0137/echoscript/main
 
 After installing the plugin, if you run any command via script, you'll be able to see an echo as demonstrated below!
 
-![Echoscript Preview](${preview})
+![Echoscript Preview](./assets/img_echoscript_preview.png)
 
 ## ⚙️ Configuration
 
-![Echoscript Structure](${structure})
+![Echoscript Structure](./assets/img_echoscript_structure.png)
 
 The structure of Echoscript is divided into Root Project, Project, Script, Subscript, and Message.
 
