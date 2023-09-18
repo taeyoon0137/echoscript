@@ -18,26 +18,26 @@ import type { Plugin, Hooks } from '@yarnpkg/core';
  */
 export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
   hooks: {
-    wrapScriptExecution: async (executor, project, locator, scriptName, extra) => {
+    wrapScriptExecution: async (executor, project, locator, scriptName, _extra) => {
       const config = loadRc(project.cwd, require);
-      const echo = echoscript(config.rootProject, locator.name, scriptName);
+      const echo = echoscript(config.rootProject, getPackageName(), scriptName);
       const log = (bracket: string, ...msg: string[]) => console.log(echo(bracket, msg.join(' ')));
       const err = (bracket: string, ...msg: string[]) => console.error(echo(bracket, msg.join(' ')));
 
       // Log start
       log('┌', 'Starting script...');
 
-      extra.stdout.on('data', captureLog); // Wrap log
-      extra.stderr.on('data', captureLog); // Wrap error
-
       /**
-       * Wrap each log
+       * Get package name with scope
        *
-       * @param data Buffer
+       * @returns Package name
        */
-      function captureLog(data: Buffer): void {
-        const message = data.toString().trim();
-        log('│', message);
+      function getPackageName(): string {
+        if (locator.scope !== null) {
+          return `@${locator.scope}/${locator.name}`;
+        }
+
+        return locator.name;
       }
 
       /**
@@ -50,10 +50,9 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
           const exitCode = await executor(); // Execute function
           if (exitCode !== 0) {
             err('└', `Script exited with code ${exitCode}`); // Log error
+          } else {
+            log('└', `Script done`); // Log done
           }
-
-          log('└', `Script done`); // Log done
-          console.log('exit', exitCode);
           return exitCode;
         } catch (error) {
           err('└', `Error occurred. (${error})`); // Log error
