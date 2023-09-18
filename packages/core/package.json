@@ -2,7 +2,16 @@
   "name": "@echoscript/core",
   "description": "Core logic of Echoscript.",
   "version": "0.0.0-alpha",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "yarn build:clear && yarn build:types",
+    "build:clear": "touch ./dist/temp && rm -rf ./dist/*",
+    "build:types": "tsc -b && tsc-alias"
+  },
   "devDependencies": {
+    "@total-typescript/ts-reset": "^0.5.1",
+    "tsc-alias": "^1.8.7",
     "typescript": "^5.2.2"
   }
 }
