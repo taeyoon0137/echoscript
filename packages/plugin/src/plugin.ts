@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { echoscript } from '@echoscript/core';
+import { echoscript, styleConsole, ConsoleStyle } from '@echoscript/core';
 
 import { loadRc } from '@func';
 
@@ -64,13 +64,13 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
         try {
           const exitCode = await executor(); // Execute function
           if (exitCode !== 0) {
-            err('└', `Script exited with code ${exitCode}`); // Log error
+            err('└', styleConsole(`Script exited with code ${exitCode}`, ConsoleStyle.Black)); // Log error
           } else {
-            log('└', config.end); // Log done
+            log('└', styleConsole(config.end, ConsoleStyle.Black)); // Log done
           }
           return exitCode;
         } catch (error) {
-          err('└', `${config.error} (${error})`); // Log error
+          err('└', styleConsole(`${config.error} (${error})`, ConsoleStyle.Black)); // Log error
           throw error;
         }
       }

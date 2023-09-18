@@ -6,3 +6,4 @@
  */
 
 export * from './echoscript';
+export * from './styleConsole';
