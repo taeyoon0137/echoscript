@@ -7,57 +7,61 @@
 
 import z from 'zod';
 
+import { EchoscriptOptions } from '@EchoscriptOptions.type';
+
 /**
  * ### Echoscriptrc
  *
  * Zod Type Definition of echoscript runtime configuration file(.echoscriptrc).
  */
-export const Echoscriptrc = z.object({
-  /**
-   * ### Root Project Name
-   *
-   * Name of Root project. Uses on monorepo-project.
-   *
-   * @default "ECHO"
-   */
-  rootProject: z.string().min(1).optional().default('ECHO'),
+export const Echoscriptrc = EchoscriptOptions.and(
+  z.object({
+    /**
+     * ### Root Project Name
+     *
+     * Name of Root project. Uses on monorepo-project.
+     *
+     * @default "ECHO"
+     */
+    rootProject: z.string().min(1).optional().default('ECHO'),
 
-  /**
-   * ### Project Name
-   *
-   * Name of project runs script.
-   *
-   * @default packageJson.name
-   */
-  project: z.string().min(1).optional(),
+    /**
+     * ### Project Name
+     *
+     * Name of project runs script.
+     *
+     * @default packageJson.name
+     */
+    project: z.string().min(1).optional(),
 
-  /**
-   * ### Start Log
-   *
-   * Log text when script starts.
-   *
-   * @default "Starting script..."
-   */
-  start: z.string().min(1).optional().default('Starting script...'),
+    /**
+     * ### Start Log
+     *
+     * Log text when script starts.
+     *
+     * @default "Starting script..."
+     */
+    start: z.string().min(1).optional().default('Starting script...'),
 
-  /**
-   * ### Error Log
-   *
-   * Log text when script returns error.
-   *
-   * @default "Error occurred."
-   */
-  error: z.string().min(1).optional().default('Error occurred.'),
+    /**
+     * ### Error Log
+     *
+     * Log text when script returns error.
+     *
+     * @default "Error occurred."
+     */
+    error: z.string().min(1).optional().default('Error occurred.'),
 
-  /**
-   * ### End Log
-   *
-   * Log text when script ends.
-   *
-   * @default "Script done"
-   */
-  end: z.string().min(1).optional().default('Script done'),
-});
+    /**
+     * ### End Log
+     *
+     * Log text when script ends.
+     *
+     * @default "Script done"
+     */
+    end: z.string().min(1).optional().default('Script done'),
+  })
+);
 
 // Type Definition
 export type Echoscriptrc = z.infer<typeof Echoscriptrc>;
