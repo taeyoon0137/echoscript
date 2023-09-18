@@ -1,7 +1,7 @@
 {
   "name": "@echoscript/yarn-plugin",
   "description": "Run echoscript via yarn plugin.",
-  "version": "0.0.1-alpha.2.2",
+  "version": "0.0.1-alpha.2.3",
   "publishConfig": {
     "access": "public"
   },
