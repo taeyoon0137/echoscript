@@ -50,20 +50,18 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
           const exitCode = await executor(); // Execute function
           if (exitCode !== 0) {
             err('└', `Script exited with code ${exitCode}`); // Log error
-          } else {
-            log('└', `Script done`); // Log done
           }
+
+          log('└', `Script done`); // Log done
           console.log('exit', exitCode);
           return exitCode;
         } catch (error) {
           err('└', `Error occurred. (${error})`); // Log error
           throw error;
         }
-
-        console.log('Finally done');
       }
 
-      return () => execute();
+      return execute;
     },
   },
 });
