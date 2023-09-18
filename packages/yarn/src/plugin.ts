@@ -20,12 +20,12 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
   hooks: {
     wrapScriptExecution: async (executor, project, locator, scriptName, extra) => {
       const config = loadRc(project.cwd, require);
-      const echo = echoscript(config.rootProject, locator.name, scriptName, 0);
-      const log = (...msg: string[]) => console.log(echo(msg.join(' ')));
-      const err = (...msg: string[]) => console.error(echo(msg.join(' ')));
+      const echo = echoscript(config.rootProject, locator.name, scriptName);
+      const log = (bracket: string, ...msg: string[]) => console.log(echo(bracket, msg.join(' ')));
+      const err = (bracket: string, ...msg: string[]) => console.error(echo(bracket, msg.join(' ')));
 
       // Log start
-      log('Starting script...');
+      log('┌', 'Starting script...');
 
       extra.stdout.on('data', captureLog); // Wrap log
       extra.stderr.on('data', captureLog); // Wrap error
@@ -37,7 +37,7 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
        */
       function captureLog(data: Buffer): void {
         const message = data.toString().trim();
-        log(message);
+        log('│', message);
       }
 
       /**
@@ -49,13 +49,13 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
         try {
           const exitCode = await executor(); // Execute function
           if (exitCode !== 0) {
-            err(`Script exited with code ${exitCode}`); // Log error
+            err('└', `Script exited with code ${exitCode}`); // Log error
           } else {
-            log(`Script done`); // Log done
+            log('└', `Script done`); // Log done
           }
           return exitCode;
         } catch (error) {
-          err(`Error occurred. (${error})`); // Log error
+          err('└', `Error occurred. (${error})`); // Log error
           throw error;
         }
       }

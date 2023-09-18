@@ -17,8 +17,7 @@
 export function echoscript(
   root: string | undefined = 'ECHO',
   pkg: string,
-  script: string,
-  depth: number = 0
-): (msg: string) => string {
-  return (msg) => `→ [${root}] ${pkg} ${depth} ${script}: ${msg}`;
+  script: string
+): (bracket: string, msg: string) => string {
+  return (bracket, msg) => `→ [${root}] ${pkg} ${bracket} ${script}: ${msg}`;
 }
