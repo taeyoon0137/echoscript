@@ -52,7 +52,7 @@
 
 - [🔥 Getting Started](#-getting-started)
 - [⚙️ Configuration](#️-configuration)
-  - [.echoscriptrc](#echoscriptrc)
+  - [`.echoscriptrc`](#echoscriptrc)
 - [📦 Packages](#-packages)
 
 ## 🔥 Getting Started
@@ -79,7 +79,7 @@ Initially, the Root Project is provided with the string `"ECHO"`, but it can be 
 
 Messages typically occur when a script starts or finishes execution. However, more instances are planned to be added in the future.
 
-### .echoscriptrc
+### `.echoscriptrc`
 
 Echoscript allows you to configure the plugin through a JSON-formatted .echoscriptrc file located in the project's root path.
 
