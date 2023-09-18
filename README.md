@@ -54,8 +54,8 @@
 
 > Current recent version is `0.0.1--alpha.0`
 
-| Package Name                               | Descripton                      |     Version     |
-| :----------------------------------------- | :------------------------------ | :-------------: |
-| [@echoscript/types](./packages/types)      | Type definition for Echoscript. | `0.0.1-alpha.0` |
-| [@echoscript/core](./packages/core)        | Core logic of Echoscript.       | `0.0.1-alpha.0` |
-| [@echoscript/yarn-plugin](./packages/yarn) | Run echoscript via yarn plugin. | `0.0.1-alpha.0` |
+| Package Name                               | Descripton                      |      Version      |
+| :----------------------------------------- | :------------------------------ | :---------------: |
+| [@echoscript/types](./packages/types)      | Type definition for Echoscript. | `0.0.1-alpha.2.0` |
+| [@echoscript/core](./packages/core)        | Core logic of Echoscript.       | `0.0.1-alpha.2.0` |
+| [@echoscript/yarn-plugin](./packages/yarn) | Run echoscript via yarn plugin. | `0.0.1-alpha.2.0` |
