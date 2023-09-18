@@ -62,7 +62,7 @@ Echoscript is a yarn plugin that logs each time an npm script runs, allowing use
 You can install this plugin using the following command:
 
 ```shell
-yarn plugin import https://raw.githubusercontent.com/taeyoon0137/echoscript/main/packages/yarn/plugin/bundle.js
+yarn plugin import https://raw.githubusercontent.com/taeyoon0137/echoscript/main/packages/plugin/plugin/bundle.js
 ```
 
 After installing the plugin, if you run any command via script, you'll be able to see an echo as demonstrated below!
