@@ -12,6 +12,12 @@
   "scripts": {
     "vscode": "yarn dlx @yarnpkg/sdks vscode",
     "sync:version": "./scripts/version.sh",
+    "ready": "yarn build && yarn bundle",
+    "build": "yarn build:types && yarn build:core && yarn build:plugin",
+    "build:types": "yarn workspace @echoscript/types build",
+    "build:core": "yarn workspace @echoscript/core build",
+    "build:plugin": "yarn workspace @echoscript/yarn-plugin build",
+    "bundle": "yarn workspace @echoscript/yarn-plugin bundle",
     "readme": "yarn readme:create && yarn readme:symbol && yarn readme:version && yarn readme:packages && yarn readme:image && yarn readme:format",
     "readme:create": "./scripts/readme_create.sh",
     "readme:packages": "./scripts/readme_packages.sh",
