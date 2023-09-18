@@ -12,7 +12,7 @@
   "scripts": {
     "vscode": "yarn dlx @yarnpkg/sdks vscode",
     "sync:version": "./scripts/version.sh",
-    "readme": "yarn readme:create && yarn readme:image && yarn readme:symbol && yarn readme:version && yarn readme:packages && yarn readme:format",
+    "readme": "yarn readme:create && yarn readme:symbol && yarn readme:version && yarn readme:packages && yarn readme:image && yarn readme:format",
     "readme:create": "./scripts/readme_create.sh",
     "readme:packages": "./scripts/readme_packages.sh",
     "readme:image": "./scripts/readme_image.sh",
