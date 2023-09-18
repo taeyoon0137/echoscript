@@ -9,5 +9,5 @@ import { plugin } from './plugin';
 
 module.exports = {
   name: `plugin-hello-world`,
-  factory: () => plugin,
+  factory: (require: Function) => plugin(require),
 };

@@ -16,10 +16,10 @@ import type { Plugin, Hooks } from '@yarnpkg/core';
  *
  * Configuration of yarn plugin
  */
-export const plugin: Plugin<Hooks> = {
+export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
   hooks: {
     wrapScriptExecution: async (executor, project, locator, scriptName, extra) => {
-      const config = loadRc(project.cwd);
+      const config = loadRc(project.cwd, require);
       const echo = echoscript(config.rootProject, locator.name, scriptName, 0);
       const log = (...msg: string[]) => console.log(echo(msg.join(' ')));
       const err = (...msg: string[]) => console.error(echo(msg.join(' ')));
@@ -63,4 +63,4 @@ export const plugin: Plugin<Hooks> = {
       return execute;
     },
   },
-};
+});
