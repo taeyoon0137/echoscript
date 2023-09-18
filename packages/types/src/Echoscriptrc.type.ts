@@ -17,8 +17,10 @@ export const Echoscriptrc = z.object({
    * ### Root Project Name
    *
    * Name of Root project. Uses on monorepo-project.
+   *
+   * @default "ECHO"
    */
-  rootProject: z.string().min(1).optional(),
+  rootProject: z.string().min(1).optional().default('ECHO'),
 
   /**
    * ### Project Name
@@ -32,38 +34,29 @@ export const Echoscriptrc = z.object({
   /**
    * ### Start Log
    *
-   * Log when script starts.
+   * Log text when script starts.
    *
-   * @default true
+   * @default "Starting script..."
    */
-  start: z.boolean().optional(),
+  start: z.string().min(1).optional().default('Starting script...'),
 
   /**
    * ### Error Log
    *
-   * Log when script returns error.
+   * Log text when script returns error.
    *
-   * @default true
+   * @default "Error occurred."
    */
-  error: z.boolean().optional(),
-
-  /**
-   * ### Error Detail Log
-   *
-   * Log detail when error reveals.
-   *
-   * @default false
-   */
-  errorDetail: z.boolean().optional(),
+  error: z.string().min(1).optional().default('Error occurred.'),
 
   /**
    * ### End Log
    *
-   * Log when script ends.
+   * Log text when script ends.
    *
-   * @default true
+   * @default "Script done"
    */
-  end: z.boolean().optional(),
+  end: z.string().min(1).optional().default('Script done'),
 });
 
 // Type Definition

@@ -8,23 +8,27 @@
           "properties": {
             "rootProject": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "default": "ECHO"
             },
             "project": {
               "type": "string",
               "minLength": 1
             },
             "start": {
-              "type": "boolean"
+              "type": "string",
+              "minLength": 1,
+              "default": "Starting script..."
             },
             "error": {
-              "type": "boolean"
-            },
-            "errorDetail": {
-              "type": "boolean"
+              "type": "string",
+              "minLength": 1,
+              "default": "Error occurred."
             },
             "end": {
-              "type": "boolean"
+              "type": "string",
+              "minLength": 1,
+              "default": "Script done"
             }
           }
         },
