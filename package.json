@@ -19,8 +19,7 @@
     "readme:symbol": "./scripts/readme_symbol.sh",
     "readme:version": "./scripts/readme_version.sh",
     "readme:format": "prettier --write \"./README.md\" --log-level silent",
-    "version": "yarn readme",
-    "postversion": "Yarn sync:version"
+    "version": "yarn sync:version && yarn readme"
   },
   "devDependencies": {
     "@lerna-lite/cli": "2.5.1",
