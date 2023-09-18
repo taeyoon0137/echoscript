@@ -40,11 +40,12 @@ export function echoscript(
      * @returns Package name with styling
      */
     function getPackageName(): string {
+      const minLength = EchoscriptOptions.parse(options)?.projectNameMaxLength;
       const [firstName, ...elseNames] = pkg.split('/');
       const first = styleConsole(firstName ?? '', [ConsoleStyle.Bold]);
       const elses = elseNames.join('/');
       const fill = styleConsole(
-        Array((EchoscriptOptions.parse(options)?.projectNameMaxLength ?? 30) - pkg.length)
+        Array(Math.max(minLength - pkg.length, 0))
           .fill('·')
           .join(''),
         ConsoleStyle.Black
