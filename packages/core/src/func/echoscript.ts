@@ -5,6 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import { EchoscriptOptions } from '@echoscript/types';
+
 import { styleConsole, ConsoleStyle } from './styleConsole';
 
 /**
@@ -13,13 +15,14 @@ import { styleConsole, ConsoleStyle } from './styleConsole';
  * @param root Root package name
  * @param pkg Package name
  * @param script Script name
- * @param depth Running depth of script
+ * @param options Echoscript options
  * @returns Function which generates script with message
  */
 export function echoscript(
   root: string | undefined = 'ECHO',
   pkg: string,
-  script: string
+  script: string,
+  options?: EchoscriptOptions
 ): (bracket: string, msg: string) => string {
   return (bracket, msg) => {
     const arrow = styleConsole('→', ConsoleStyle.Black);
@@ -31,11 +34,16 @@ export function echoscript(
 
     function getPackageName(): string {
       const [firstName, ...elseNames] = pkg.split('/');
-      const elseName = elseNames.join('/');
-      return (
-        styleConsole(firstName ?? '', [ConsoleStyle.Bold]) +
-        (elseName ? styleConsole(`/${elseName}`, [ConsoleStyle.Blue, ConsoleStyle.Bold]) : '')
+      const first = styleConsole(firstName ?? '', [ConsoleStyle.Bold]);
+      const elses = elseNames.join('/');
+      const fill = styleConsole(
+        Array((EchoscriptOptions.parse(options)?.projectNameMaxLength ?? 30) - pkg.length)
+          .fill('·')
+          .join(''),
+        ConsoleStyle.Black
       );
+
+      return first + (elses ? styleConsole(`/${elses}`, [ConsoleStyle.Blue, ConsoleStyle.Bold]) : '') + fill;
     }
 
     function getScriptName(): string {
