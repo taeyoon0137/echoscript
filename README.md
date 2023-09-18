@@ -58,4 +58,4 @@
 | :----------------------------------------- | :------------------------------ | :---------------: |
 | [@echoscript/types](./packages/types)      | Type definition for Echoscript. | `0.0.1-alpha.2.2` |
 | [@echoscript/core](./packages/core)        | Core logic of Echoscript.       | `0.0.1-alpha.2.2` |
-| [@echoscript/yarn-plugin](./packages/yarn) | Run echoscript via yarn plugin. | `0.0.1-alpha.2.2` |
+| [@echoscript/yarn-plugin](./packages/yarn) | Run echoscript via yarn plugin. | `0.0.1-alpha.2.3` |
