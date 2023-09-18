@@ -22,7 +22,9 @@ export function echoscript(
   root: string | undefined = 'ECHO',
   pkg: string,
   script: string,
-  options?: EchoscriptOptions
+  options: EchoscriptOptions = {
+    projectNameMaxLength: 30,
+  }
 ): (bracket: string, msg: string) => string {
   return (bracket, msg) => {
     const arrow = styleConsole('→', ConsoleStyle.Black);
@@ -32,6 +34,11 @@ export function echoscript(
     const scriptName = getScriptName();
     const colon = styleConsole(':', ConsoleStyle.Black);
 
+    /**
+     * Get package name with styling
+     *
+     * @returns Package name with styling
+     */
     function getPackageName(): string {
       const [firstName, ...elseNames] = pkg.split('/');
       const first = styleConsole(firstName ?? '', [ConsoleStyle.Bold]);
@@ -46,6 +53,11 @@ export function echoscript(
       return first + (elses ? styleConsole(`/${elses}`, [ConsoleStyle.Blue, ConsoleStyle.Bold]) : '') + fill;
     }
 
+    /**
+     * Get script name with styling
+     *
+     * @returns Script name with styling
+     */
     function getScriptName(): string {
       const [firstName, ...elseNames] = script.split(':');
       const elseName = elseNames.join(':');
