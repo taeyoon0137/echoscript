@@ -10,13 +10,20 @@
   "scripts": {
     "build": "yarn build:clear && yarn build:types",
     "build:clear": "touch ./dist/temp && rm -rf ./dist/*",
-    "build:types": "tsc -b && tsc-alias"
+    "build:types": "tsc -b && tsc-alias",
+    "schema": "ts-node -r tsconfig-paths/register scripts/schema.ts"
   },
   "devDependencies": {
     "@total-typescript/ts-reset": "^0.5.1",
+    "@types/node": "^20.6.2",
+    "@types/prettier": "^3.0.0",
+    "prettier": "^3.0.3",
+    "ts-node": "^10.9.1",
     "tsc-alias": "^1.8.7",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.2.2",
-    "zod": "^3.22.2"
+    "zod": "^3.22.2",
+    "zod-to-json-schema": "^3.21.4"
   },
   "peerDependencies": {
     "zod": "*"
