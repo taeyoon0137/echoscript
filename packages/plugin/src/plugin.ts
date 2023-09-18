@@ -18,11 +18,14 @@ import type { Plugin, Hooks } from '@yarnpkg/core';
  */
 export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
   hooks: {
-    wrapScriptExecution: async (executor, project, locator, scriptName, _extra) => {
+    wrapScriptExecution: async (executor, project, locator, scriptName, extra) => {
+      const currentDepth = parseInt(extra.env['ECHO_SCRIPT_DEPTH'] ?? '0');
+      extra.env['ECHO_SCRIPT_DEPTH'] = (currentDepth + 1).toString();
+
       const config = loadRc(project.cwd, require);
       const echo = echoscript(config.rootProject, config.project ?? getPackageName(), scriptName);
-      const log = (bracket: string, ...msg: string[]) => console.log(echo(bracket, msg.join(' ')));
-      const err = (bracket: string, ...msg: string[]) => console.error(echo(bracket, msg.join(' ')));
+      const log = (bracket: string, ...msg: string[]) => console.log(echo(getDepth(bracket), msg.join(' ')));
+      const err = (bracket: string, ...msg: string[]) => console.error(echo(getDepth(bracket), msg.join(' ')));
 
       // Log start
       log('┌', config.start);
@@ -38,6 +41,18 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
         }
 
         return locator.name;
+      }
+
+      /**
+       * Get depth line
+       *
+       * @param start start line
+       * @returns Depth line
+       */
+      function getDepth(start: string): string {
+        const arr = Array(currentDepth).fill('│');
+        arr.push(start);
+        return arr.join(' ');
       }
 
       /**
