@@ -2,6 +2,9 @@
   "name": "@echoscript/yarn-plugin",
   "description": "Run echoscript via yarn plugin.",
   "version": "0.0.1-alpha.2.1",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "yarn build:clear && yarn build:types",
     "build:clear": "touch ./dist/temp && rm -rf ./dist/*",
@@ -17,5 +20,5 @@
     "@echoscript/core": "^0.0.1-alpha.2.1",
     "@echoscript/types": "^0.0.1-alpha.2.1"
   },
-  "gitHead": "85c7e3570c27949936d194736a1188bafd09a4c9"
+  "gitHead": "666f5bb6b39213db9fb8c6dd2f3f28413e7cce78"
 }
