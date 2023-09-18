@@ -53,11 +53,14 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
           } else {
             log('└', `Script done`); // Log done
           }
+          console.log('exit', exitCode);
           return exitCode;
         } catch (error) {
           err('└', `Error occurred. (${error})`); // Log error
           throw error;
         }
+
+        console.log('Finally done');
       }
 
       return () => execute();
