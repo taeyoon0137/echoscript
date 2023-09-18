@@ -75,7 +75,7 @@ After installing the plugin, if you run any command via script, you'll be able t
 
 The structure of Echoscript is divided into Root Project, Project, Script, Subscript, and Message.
 
-Initially, the Root Project is provided with the string `"ECHO"`, but it can be modified through the `.echoscriptrc` file. The Project displays the `"name"` value of the package where the script runs, while Script and Subscript show the name of the executing script. If the Script contains a `":"`, it's recognized and differentiated as a Subscript based on this.
+Initially, the Root Project is provided with the string `"🔈"`, but it can be modified through the `.echoscriptrc` file. The Project displays the `"name"` value of the package where the script runs, while Script and Subscript show the name of the executing script. If the Script contains a `":"`, it's recognized and differentiated as a Subscript based on this.
 
 Messages typically occur when a script starts or finishes execution. However, more instances are planned to be added in the future.
 
