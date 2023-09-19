@@ -7,8 +7,16 @@
     "packages/*"
   ],
   "packageManager": "yarn@3.6.3",
-  "repository": "https://github.com/taeyoon0137/echoscript.git",
-  "author": "Taeyoon Lee <taeyoon0137@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taeyoon0137/echoscript.git",
+    "directory": "."
+  },
+  "author": {
+    "name": "Taeyoon Lee",
+    "email": "taeyoon0137@gmail.com",
+    "url": "https://github.com/taeyoon0137"
+  },
   "scripts": {
     "vscode": "yarn dlx @yarnpkg/sdks vscode",
     "sync:version": "./scripts/version.sh",
