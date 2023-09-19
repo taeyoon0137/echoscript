@@ -16,7 +16,7 @@ BAK_README_DIR="$ROOT_DIR/README.md.bak"
 PACKAGES_DIR="$ROOT_DIR/packages"
 
 
-# 빈 문자열을 변수에 초기화
+# Initialize Table Start
 markdown_table=""
 markdown_table+="| Package Name | Descripton | Version |\n"
 markdown_table+="|:-------------|:-----------|:-------:|\n"
