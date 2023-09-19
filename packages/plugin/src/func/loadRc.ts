@@ -15,12 +15,12 @@ import { Echoscriptrc } from '@echoscript/types';
  * @returns Custom echoscript config
  */
 export function loadRc(rootPath: string, require: Function): Echoscriptrc {
-  const fs = require('fs');
-  const path = require('path');
-  const configPath = path.resolve(rootPath, '.echoscriptrc');
+  const fs: typeof import('fs') = require('fs'); // use yarn given require function
+  const path: typeof import('path') = require('path'); // use yarn given require function
+  const configPath = getConfigPath();
 
   // When `.echoscriptrc` not exist
-  if (!fs.existsSync(configPath)) {
+  if (configPath === null) {
     return Echoscriptrc.parse({});
   }
 
@@ -30,6 +30,18 @@ export function loadRc(rootPath: string, require: Function): Echoscriptrc {
   // When `.echoscriptrc` format not correct
   if (!configParse.success) {
     return Echoscriptrc.parse({});
+  }
+
+  /**
+   * Get configure path
+   *
+   * @returns configure file path
+   */
+  function getConfigPath(): string | null {
+    const cPath = path.resolve(rootPath, '.echoscriptrc');
+    if (fs.existsSync(cPath)) return cPath;
+    if (fs.existsSync(cPath + '.json')) return cPath + '.json';
+    return null;
   }
 
   return configParse.data;
