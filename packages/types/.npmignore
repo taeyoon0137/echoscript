@@ -1,0 +1,27 @@
+# Copyright 2023 Taeyoon Lee. All Right Reserved.
+#
+# This source code is licensed under the MIT license found in the
+# LICENSE file in the root directory of this source tree.
+
+# Original source files
+project/
+src/
+
+# Modules
+node_modules/
+
+# System files
+.DS_Store
+
+# Config files
+tsconfig.json
+
+# Documentation files
+docs/
+README.md
+
+# Script files
+scripts/
+script/
+tasks/
+task/
