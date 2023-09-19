@@ -19,7 +19,7 @@
 </p>
 
 <!-- Title -->
-<h1 align="center">Echoscript</h1>
+<h1 align="center">>Echoscript</h1>
 <p align="center">Echo for every script. For safety.</p>
 
 <!-- Package Version -->
@@ -81,7 +81,7 @@ Messages typically occur when a script starts or finishes execution. However, mo
 
 ### `.echoscriptrc`
 
-Echoscript allows you to configure the plugin through a JSON-formatted .echoscriptrc file located in the project's root path.
+Echoscript allows you to configure the plugin through a JSON-formatted `.echoscriptrc` file located in the project's root path.
 
 For easy configuration, a predefined JSON schema can be used as follows:
 
