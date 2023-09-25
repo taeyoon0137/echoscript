@@ -64,13 +64,13 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
         try {
           const exitCode = await executor(); // Execute function
           if (exitCode !== 0) {
-            err('└', styleConsole(`Script exited with code ${exitCode}`, ConsoleStyle.Black)); // Log error
+            err('└', styleConsole(`Script exited with code ${exitCode}`, ConsoleStyle.Red)); // Log error
           } else {
             log('└', styleConsole(config.end, ConsoleStyle.Black)); // Log done
           }
           return exitCode;
         } catch (error) {
-          err('└', styleConsole(`${config.error} (${error})`, ConsoleStyle.Black)); // Log error
+          err('└', styleConsole(`${config.error} (${error})`, ConsoleStyle.Red)); // Log error
           throw error;
         }
       }
