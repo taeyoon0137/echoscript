@@ -2,6 +2,7 @@
   "name": "@echoscript/types",
   "description": "Type definition for Echoscript.",
   "version": "0.1.4",
+  "license": "MIT",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "publishConfig": {

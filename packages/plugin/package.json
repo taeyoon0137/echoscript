@@ -2,6 +2,7 @@
   "name": "@echoscript/yarn-plugin",
   "description": "Run echoscript via yarn plugin.",
   "version": "0.1.4",
+  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
