@@ -41,15 +41,18 @@ export function echoscript(
      */
     function getPackageName(): string {
       const minLength = EchoscriptOptions.parse(options)?.projectNameMaxLength;
-      const [firstName, ...elseNames] = pkg.split('/');
+      const fillString = Array(minLength).fill('·').join('');
+      let pkgName = `${pkg}`;
+
+      // When package name length is longer than max length
+      if (pkg.length > minLength) {
+        pkgName = '...' + pkg.substring(pkg.length - (minLength - 3), pkg.length);
+      }
+
+      const [firstName, ...elseNames] = pkgName.split('/');
       const first = styleConsole(firstName ?? '', [ConsoleStyle.Bold]);
       const elses = elseNames.join('/');
-      const fill = styleConsole(
-        Array(Math.max(minLength - pkg.length, 0))
-          .fill('·')
-          .join(''),
-        ConsoleStyle.Black
-      );
+      const fill = styleConsole(fillString.substring(0, minLength - pkgName.length), ConsoleStyle.Black);
 
       return first + (elses ? styleConsole(`/${elses}`, [ConsoleStyle.Blue, ConsoleStyle.Bold]) : '') + fill;
     }
