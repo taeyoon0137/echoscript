@@ -51,7 +51,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@echoscript/core@^0.1.2, @echoscript/core@workspace:packages/core":
+"@echoscript/core@^0.1.4, @echoscript/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@echoscript/core@workspace:packages/core"
   dependencies:
@@ -63,7 +63,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@echoscript/types@^0.1.1, @echoscript/types@workspace:^, @echoscript/types@workspace:packages/types":
+"@echoscript/types@^0.1.4, @echoscript/types@workspace:^, @echoscript/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@echoscript/types@workspace:packages/types"
   dependencies:
@@ -86,8 +86,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@echoscript/yarn-plugin@workspace:packages/plugin"
   dependencies:
-    "@echoscript/core": ^0.1.2
-    "@echoscript/types": ^0.1.1
+    "@echoscript/core": ^0.1.4
+    "@echoscript/types": ^0.1.4
     "@rollup/plugin-commonjs": ^25.0.4
     "@rollup/plugin-node-resolve": ^15.2.1
     "@rollup/plugin-typescript": ^11.1.3
