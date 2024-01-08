@@ -22,7 +22,7 @@
     "sync:version": "./scripts/version.sh",
     "ready": "yarn build && yarn bundle",
     "build": "yarn build:types && yarn build:core && yarn build:plugin",
-    "build:types": "yarn workspace @echoscript/types build",
+    "build:types": "yarn workspace @echoscript/types ready",
     "build:core": "yarn workspace @echoscript/core build",
     "build:plugin": "yarn workspace @echoscript/yarn-plugin build",
     "bundle": "yarn workspace @echoscript/yarn-plugin bundle",
