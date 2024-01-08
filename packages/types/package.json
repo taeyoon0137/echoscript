@@ -9,6 +9,7 @@
     "access": "public"
   },
   "scripts": {
+    "ready": "yarn build && yarn schema",
     "build": "yarn build:clear && yarn build:types",
     "build:clear": "touch ./dist/temp && rm -rf ./dist/*",
     "build:types": "tsc -b && tsc-alias",
