@@ -17,15 +17,15 @@
   },
   "devDependencies": {
     "@total-typescript/ts-reset": "^0.5.1",
-    "@types/node": "^20.6.2",
+    "@types/node": "^20.10.7",
     "@types/prettier": "^3.0.0",
-    "prettier": "^3.0.3",
-    "ts-node": "^10.9.1",
-    "tsc-alias": "^1.8.7",
+    "prettier": "^3.1.1",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.8",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.2.2",
-    "zod": "^3.22.2",
-    "zod-to-json-schema": "^3.21.4"
+    "zod": "^3.22.4",
+    "zod-to-json-schema": "^3.22.3"
   },
   "peerDependencies": {
     "zod": "*"
