@@ -18,17 +18,17 @@ import type { Plugin, Hooks } from '@yarnpkg/core';
  */
 export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
   hooks: {
-    wrapScriptExecution: async (executor, project, locator, scriptName, extra) => {
+    wrapScriptExecution: async (executor, proj, locator, scriptName, extra) => {
       const currentDepth = parseInt(extra.env['ECHO_SCRIPT_DEPTH'] ?? '0');
       extra.env['ECHO_SCRIPT_DEPTH'] = (currentDepth + 1).toString();
 
-      const config = loadRc(project.cwd, require);
-      const echo = echoscript(config.rootProject, config.project ?? getPackageName(), scriptName);
+      const { rootProject, project, start, end, error, ...configs } = loadRc(proj.cwd, require);
+      const echo = echoscript(rootProject, project ?? getPackageName(), scriptName, configs);
       const log = (bracket: string, ...msg: string[]) => console.log(echo(getDepth(bracket), msg.join(' ')));
       const err = (bracket: string, ...msg: string[]) => console.error(echo(getDepth(bracket), msg.join(' ')));
 
       // Log start
-      log('┌', config.start);
+      log('┌', start);
 
       /**
        * Get package name with scope
@@ -66,11 +66,11 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
           if (exitCode !== 0) {
             err('└', styleConsole(`Script exited with code ${exitCode}`, ConsoleStyle.Red)); // Log error
           } else {
-            log('└', styleConsole(config.end, ConsoleStyle.Black)); // Log done
+            log('└', styleConsole(end, ConsoleStyle.Black)); // Log done
           }
           return exitCode;
         } catch (error) {
-          err('└', styleConsole(`${config.error} (${error})`, ConsoleStyle.Red)); // Log error
+          err('└', styleConsole(`${error} (${error})`, ConsoleStyle.Red)); // Log error
           throw error;
         }
       }
