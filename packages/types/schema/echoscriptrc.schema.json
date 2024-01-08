@@ -6,10 +6,15 @@
         {
           "type": "object",
           "properties": {
+            "projectNameMaxLength": {
+              "type": "number",
+              "minimum": 1,
+              "default": 30
+            },
             "rootProject": {
               "type": "string",
               "minLength": 1,
-              "default": "ECHO"
+              "default": "🔈"
             },
             "project": {
               "type": "string",
@@ -18,17 +23,17 @@
             "start": {
               "type": "string",
               "minLength": 1,
-              "default": "Starting script..."
+              "default": "Starting script...🔥"
             },
             "error": {
               "type": "string",
               "minLength": 1,
-              "default": "Error occurred."
+              "default": "Error occurred ❌"
             },
             "end": {
               "type": "string",
               "minLength": 1,
-              "default": "Script done"
+              "default": "Script done ✅"
             }
           }
         },
