@@ -1,7 +1,7 @@
 {
   "name": "echoscript",
   "description": "Echo for every script. For safety.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "license": "MIT",
   "workspaces": [
     "packages/*"
