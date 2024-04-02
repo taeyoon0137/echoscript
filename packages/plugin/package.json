@@ -15,15 +15,15 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.5",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@total-typescript/ts-reset": "^0.5.1",
-    "@yarnpkg/core": "^4.0.2",
-    "rollup": "^3.29.4",
+    "@yarnpkg/core": "^4.0.3",
+    "rollup": "^4.13.2",
     "rollup-plugin-minify": "^1.0.3",
     "rollup-plugin-terser": "^7.0.2",
     "tsc-alias": "^1.8.8",
     "tslib": "^2.6.2",
-    "typescript": "^5.2.2"
+    "typescript": "5.2.*"
   },
   "dependencies": {
     "@echoscript/core": "^0.2.2",
