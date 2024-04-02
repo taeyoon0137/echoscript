@@ -51,7 +51,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@echoscript/core@^0.2.2, @echoscript/core@workspace:packages/core":
+"@echoscript/core@^0.3.0, @echoscript/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@echoscript/core@workspace:packages/core"
   dependencies:
@@ -63,7 +63,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@echoscript/types@^0.2.2, @echoscript/types@workspace:^, @echoscript/types@workspace:packages/types":
+"@echoscript/types@^0.3.0, @echoscript/types@workspace:^, @echoscript/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@echoscript/types@workspace:packages/types"
   dependencies:
@@ -86,8 +86,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@echoscript/yarn-plugin@workspace:packages/plugin"
   dependencies:
-    "@echoscript/core": ^0.2.2
-    "@echoscript/types": ^0.2.2
+    "@echoscript/core": ^0.3.0
+    "@echoscript/types": ^0.3.0
     "@rollup/plugin-commonjs": ^25.0.7
     "@rollup/plugin-node-resolve": ^15.2.3
     "@rollup/plugin-typescript": ^11.1.6
@@ -3269,9 +3269,9 @@ __metadata:
   linkType: hard
 
 "ip@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "ip@npm:2.0.0"
-  checksum: cfcfac6b873b701996d71ec82a7dd27ba92450afdb421e356f44044ed688df04567344c36cbacea7d01b1c39a4c732dc012570ebe9bebfb06f27314bca625349
+  version: 2.0.1
+  resolution: "ip@npm:2.0.1"
+  checksum: d765c9fd212b8a99023a4cde6a558a054c298d640fec1020567494d257afd78ca77e37126b1a3ef0e053646ced79a816bf50621d38d5e768cdde0431fa3b0d35
   languageName: node
   linkType: hard
 
