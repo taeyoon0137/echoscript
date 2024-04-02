@@ -1,7 +1,7 @@
 {
   "name": "@echoscript/yarn-plugin",
   "description": "Run echoscript via yarn plugin.",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -26,8 +26,8 @@
     "typescript": "5.2.*"
   },
   "dependencies": {
-    "@echoscript/core": "^0.2.2",
-    "@echoscript/types": "^0.2.2"
+    "@echoscript/core": "^0.3.0",
+    "@echoscript/types": "^0.3.0"
   },
   "gitHead": "666f5bb6b39213db9fb8c6dd2f3f28413e7cce78"
 }
