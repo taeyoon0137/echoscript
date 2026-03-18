@@ -11,7 +11,7 @@
   "scripts": {
     "build": "yarn build:clear && yarn build:types",
     "build:clear": "rm -rf ./dist && mkdir -p ./dist",
-    "build:types": "tsc -b && tsc-alias"
+    "build:types": "tsc -p tsconfig.json && tsc-alias"
   },
   "devDependencies": {
     "@total-typescript/ts-reset": "^0.6.1",

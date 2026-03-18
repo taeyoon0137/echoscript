@@ -12,7 +12,7 @@
     "ready": "yarn build && yarn schema",
     "build": "yarn build:clear && yarn build:types",
     "build:clear": "rm -rf ./dist && mkdir -p ./dist",
-    "build:types": "tsc -b && tsc-alias",
+    "build:types": "tsc -p tsconfig.json && tsc-alias",
     "schema": "tsx scripts/schema.ts"
   },
   "devDependencies": {
