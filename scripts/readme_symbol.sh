@@ -15,16 +15,16 @@ README_DIR="$ROOT_DIR/README.md"
 BAK_README_DIR="$ROOT_DIR/README.md.bak"
 
 # Import encode_url
-source $SCRIPT_DIR/utils/encode_url.sh
+source "$SCRIPT_DIR/utils/encode_url.sh"
 
 # Encode Symbol to Base64
-ENCODED_SYMBOL=$(base64 < $SYMBOL_DIR)
+ENCODED_SYMBOL=$(base64 < "$SYMBOL_DIR")
 
 # Inject Symbol into TEMP README
-sed "s|\${symbol}|data:image/svg+xml;base64,$(encode_url "$ENCODED_SYMBOL")|g" $README_DIR > $BAK_README_DIR
+sed "s|\${symbol}|data:image/svg+xml;base64,$(encode_shields_badge "$ENCODED_SYMBOL")|g" "$README_DIR" > "$BAK_README_DIR"
 
 # Override README via TEMP README
-mv $BAK_README_DIR $README_DIR
+mv "$BAK_README_DIR" "$README_DIR"
 
 # Remove Backup
-rm -f $README_DIR.bak
+rm -f "$README_DIR.bak"

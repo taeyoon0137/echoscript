@@ -7,7 +7,6 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "module": "CommonJS",
     "rootDir": "./src",
     "baseUrl": "./src",
     "outDir": "./dist",
@@ -15,5 +14,6 @@
       "@*": ["./*"]
     }
   },
+  "include": ["src"],
   "exclude": ["dist"]
 }

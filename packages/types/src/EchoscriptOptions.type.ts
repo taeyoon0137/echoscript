@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import z from 'zod';
+import { z } from 'zod';
 
 /**
  * ### EchoscriptOptions
@@ -20,7 +20,7 @@ export const EchoscriptOptions = z.object({
    *
    * @default 30
    */
-  projectNameMaxLength: z.number().min(1).optional().default(30),
+  projectNameMaxLength: z.number().min(1).default(30),
 });
 
 // Type Definition

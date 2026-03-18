@@ -7,7 +7,7 @@
 
 import { plugin } from './plugin';
 
-module.exports = {
+export default {
   name: `yarn-plugin-echoscript`,
-  factory: (require: Function) => plugin(require),
+  factory: (require: (module: string) => unknown) => plugin(require),
 };

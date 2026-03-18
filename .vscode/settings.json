@@ -8,8 +8,12 @@
   // Mistype Check
   // Recommend to install "code-spell-checker"
   "cSpell.words": [
+    "coreutils",
     "echoscript",
     "echoscriptrc",
+    "findutils",
+    "gfind",
+    "grealpath",
     "iife",
     "postversion"
   ],

@@ -15,13 +15,13 @@ PACKAGE_JSON_DIR="$ROOT_DIR/package.json"
 TEMP_PACKAGE_JSON_DIR="$ROOT_DIR/package.tmp.json"
 
 # Check is jq installed
-$SCRIPT_DIR/utils/install_jq.sh
+"$SCRIPT_DIR/utils/install_jq.sh"
 
 # Get version info from lerna.json
-LERNA_VERSION=$(jq -r '.version' $LERNA_DIR)
+LERNA_VERSION=$(jq -r '.version' "$LERNA_DIR")
 
 # Update version to package.tmp.json
-jq ".version = \"$LERNA_VERSION\"" $PACKAGE_JSON_DIR > $TEMP_PACKAGE_JSON_DIR
+jq ".version = \"$LERNA_VERSION\"" "$PACKAGE_JSON_DIR" > "$TEMP_PACKAGE_JSON_DIR"
 
 # Override package.json via temp package.json
-mv $TEMP_PACKAGE_JSON_DIR $PACKAGE_JSON_DIR
+mv "$TEMP_PACKAGE_JSON_DIR" "$PACKAGE_JSON_DIR"

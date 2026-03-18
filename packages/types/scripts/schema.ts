@@ -5,12 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import fs from 'fs';
-import path from 'path';
-import z from 'zod';
+import fs from 'node:fs';
+import path from 'node:path';
 import prettier from 'prettier';
 
-import { zodToJsonSchema } from 'zod-to-json-schema';
+import { z } from 'zod';
 
 import { Echoscriptrc } from '../src';
 
@@ -35,15 +34,22 @@ const SCHEMA_NAME = 'echoscriptrc';
  *
  * The path where the schema will be located.
  */
-const SCHEMA_PATH = path.resolve(SCHEMA_DIR, SCHEMA_NAME + '.schema.json');
+const SCHEMA_PATH = path.resolve(SCHEMA_DIR, `${SCHEMA_NAME}.schema.json`);
 
 /**
  * Converts a given ZodType to JSON Schema and saves it.
  */
-function main(): void {
+async function main(): Promise<void> {
   const presetSchema = getSchemaPreset(Echoscriptrc);
-  const schema = zodToJsonSchema(presetSchema, SCHEMA_NAME);
-  saveSchema(schema);
+  const definition = z.toJSONSchema(presetSchema, { io: 'input' }) as Record<string, unknown>;
+  const schema = {
+    $ref: `#/definitions/${SCHEMA_NAME}`,
+    definitions: {
+      [SCHEMA_NAME]: definition,
+    },
+    $schema: 'http://json-schema.org/draft-07/schema#',
+  };
+  await saveSchema(schema);
 }
 
 /**
@@ -61,7 +67,7 @@ function getSchemaPreset(zodType: ZodType): ZodType {
        * Specifies the path for this schema.
        */
       $schema: z.string(),
-    })
+    }),
   );
 }
 
@@ -70,9 +76,14 @@ function getSchemaPreset(zodType: ZodType): ZodType {
  *
  * @param schema The schema object
  */
-async function saveSchema(schema: ReturnType<typeof zodToJsonSchema>): Promise<void> {
-  const stringified = await prettier.format(JSON.stringify(schema), { parser: 'json-stringify' });
+async function saveSchema(schema: Record<string, unknown>): Promise<void> {
+  const stringified = await prettier.format(JSON.stringify(schema), {
+    parser: 'json-stringify',
+  });
   fs.writeFileSync(SCHEMA_PATH, stringified, 'utf-8');
 }
 
-main();
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});

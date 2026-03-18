@@ -5,10 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import typescript from '@rollup/plugin-typescript';
-import { terser } from 'rollup-plugin-terser';
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "@rollup/plugin-typescript";
+import terser from "@rollup/plugin-terser";
 
 /**
  * Configure Typescript Options
@@ -18,6 +18,7 @@ import { terser } from 'rollup-plugin-terser';
 const typescriptOption = {
   declaration: false,
   removeComments: true,
+  outDir: "./plugin",
 };
 
 /**
@@ -26,11 +27,10 @@ const typescriptOption = {
  * @type { import('rollup').RollupOptions }
  */
 const options = {
-  input: 'src/main.ts',
+  input: "src/main.ts",
   output: {
-    name: 'echoscript',
-    file: 'dist/bundle.js',
-    format: 'iife',
+    file: "plugin/bundle.js",
+    format: "cjs",
   },
   plugins: [typescript(typescriptOption), resolve(), commonjs(), terser()],
 };

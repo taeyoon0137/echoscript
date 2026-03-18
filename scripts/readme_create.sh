@@ -14,4 +14,4 @@ README_DIR="$ROOT_DIR/README.md"
 PRESET_README_DIR="$ROOT_DIR/resources/README.preset.md"
 
 # Copy Readme Preset into Readme
-cp $PRESET_README_DIR $README_DIR
+cp "$PRESET_README_DIR" "$README_DIR"
