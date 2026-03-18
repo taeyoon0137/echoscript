@@ -10,7 +10,7 @@
     "bundle": "rollup --silent --config ./rollup.config.js --bundleConfigAsCjs",
     "build": "yarn build:clear && yarn build:types",
     "build:clear": "rm -rf ./dist && mkdir -p ./dist",
-    "build:types": "tsc -b && tsc-alias"
+    "build:types": "tsc -p tsconfig.json && tsc-alias"
   },
   "devDependencies": {
     "@echoscript/core": "workspace:^",
