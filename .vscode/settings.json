@@ -4,10 +4,15 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-{
+ {
   // Mistype Check
   // Recommend to install "code-spell-checker"
-  "cSpell.words": ["echoscript", "echoscriptrc", "iife", "postversion"],
+  "cSpell.words": [
+    "echoscript",
+    "echoscriptrc",
+    "iife",
+    "postversion"
+  ],
   // Snippet Recommandation
   // Turn on for License
   "editor.quickSuggestions": {
