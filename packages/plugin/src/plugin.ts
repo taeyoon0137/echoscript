@@ -16,19 +16,27 @@ import type { Plugin, Hooks } from '@yarnpkg/core';
  *
  * Configuration of yarn plugin
  */
-export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
+export const plugin: (require: (module: string) => unknown) => Plugin<Hooks> = (require) => ({
   hooks: {
     wrapScriptExecution: async (executor, proj, locator, scriptName, extra) => {
       const currentDepth = parseInt(extra.env['ECHO_SCRIPT_DEPTH'] ?? '0');
       extra.env['ECHO_SCRIPT_DEPTH'] = (currentDepth + 1).toString();
 
-      const { rootProject, project, start, end, error, ...configs } = loadRc(proj.cwd, require);
+      const {
+        rootProject,
+        project,
+        start: startMessage,
+        end: endMessage,
+        error: errorMessage,
+        ...configs
+      } = loadRc(proj.cwd, require);
+
       const echo = echoscript(rootProject, project ?? getPackageName(), scriptName, configs);
       const log = (bracket: string, ...msg: string[]) => console.log(echo(getDepth(bracket), msg.join(' ')));
       const err = (bracket: string, ...msg: string[]) => console.error(echo(getDepth(bracket), msg.join(' ')));
 
       // Log start
-      log('┌', start);
+      log('┌', startMessage);
 
       /**
        * Get package name with scope
@@ -46,12 +54,12 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
       /**
        * Get depth line
        *
-       * @param start start line
+       * @param bracket start line
        * @returns Depth line
        */
-      function getDepth(start: string): string {
+      function getDepth(bracket: string): string {
         const arr = Array(currentDepth).fill('│');
-        arr.push(start);
+        arr.push(bracket);
         return arr.join(' ');
       }
 
@@ -66,12 +74,13 @@ export const plugin: (require: Function) => Plugin<Hooks> = (require) => ({
           if (exitCode !== 0) {
             err('└', styleConsole(`Script exited with code ${exitCode}`, ConsoleStyle.Red)); // Log error
           } else {
-            log('└', styleConsole(end, ConsoleStyle.Black)); // Log done
+            log('└', styleConsole(endMessage, ConsoleStyle.Black)); // Log done
           }
           return exitCode;
-        } catch (error) {
-          err('└', styleConsole(`${error} (${error})`, ConsoleStyle.Red)); // Log error
-          throw error;
+        } catch (caughtError) {
+          const detail = caughtError instanceof Error ? caughtError.message : String(caughtError);
+          err('└', styleConsole(`${errorMessage}: ${detail}`, ConsoleStyle.Red)); // Log error
+          throw caughtError;
         }
       }
 

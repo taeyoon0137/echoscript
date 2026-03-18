@@ -11,24 +11,22 @@
   "scripts": {
     "ready": "yarn build && yarn schema",
     "build": "yarn build:clear && yarn build:types",
-    "build:clear": "touch ./dist/temp && rm -rf ./dist/*",
+    "build:clear": "rm -rf ./dist && mkdir -p ./dist",
     "build:types": "tsc -b && tsc-alias",
-    "schema": "ts-node -r tsconfig-paths/register scripts/schema.ts"
+    "schema": "tsx scripts/schema.ts"
   },
   "devDependencies": {
-    "@total-typescript/ts-reset": "^0.5.1",
-    "@types/node": "^20.12.2",
-    "@types/prettier": "^3.0.0",
-    "prettier": "^3.2.5",
-    "ts-node": "^10.9.2",
-    "tsc-alias": "^1.8.8",
-    "tsconfig-paths": "^4.2.0",
-    "typescript": "5.2.*",
-    "zod": "^3.22.4",
-    "zod-to-json-schema": "^3.22.5"
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@types/node": "^22.0.0",
+    "prettier": "^3.8.1",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.0",
+    "zod": "^4.3.6",
+    "zod-to-json-schema": "^3.25.1"
   },
   "peerDependencies": {
-    "zod": "*"
+    "zod": ">=4.0.0"
   },
   "gitHead": "666f5bb6b39213db9fb8c6dd2f3f28413e7cce78"
 }

@@ -9,11 +9,10 @@
     /* Language and Environment */
     "target": "ES6",
     "lib": ["ES6", "DOM", "ES2016", "ES2017", "ESNext"],
-    "jsx": "react",
 
     /* Modules */
-    "module": "CommonJS",
-    "moduleResolution": "node",
+    "module": "Node16",
+    "moduleResolution": "node16",
 
     /* Emit */
     "declaration": true,
@@ -25,23 +24,20 @@
     
     /* Interop Constraints */
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": false,
-
-    /* Type Checking */
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noPropertyAccessFromIndexSignature": true,
 
     /* Advanced Options */
     "skipLibCheck": true,
-    "resolveJsonModule": true,
+    "resolveJsonModule": true
   },
+  "files": ["@types/reset.d.ts"],
   "exclude": ["node_modules"]
 }

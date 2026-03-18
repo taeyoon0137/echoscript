@@ -18,14 +18,14 @@ PACKAGES_DIR="$ROOT_DIR/packages"
 
 # Initialize Table Start
 markdown_table=""
-markdown_table+="| Package Name | Descripton | Version |\n"
+markdown_table+="| Package Name | Description | Version |\n"
 markdown_table+="|:-------------|:-----------|:-------:|\n"
 
 # Set find command depends on OS
 FIND_COMMAND="find"
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # Check is findutils installed
-    $SCRIPT_DIR/utils/install_findutils.sh
+    "$SCRIPT_DIR/utils/install_findutils.sh"
 
     # Set command as gfind
     if command -v gfind &>/dev/null; then
@@ -37,7 +37,7 @@ fi
 REALPATH_COMMAND="realpath"
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # Check is coreutils installed
-    $SCRIPT_DIR/utils/install_coreutils.sh
+    "$SCRIPT_DIR/utils/install_coreutils.sh"
 
     if command -v grealpath &>/dev/null; then
         REALPATH_COMMAND="grealpath"
@@ -50,13 +50,12 @@ while read -r file; do
     name=$(jq -r ".name" "$file")
     version=$(jq -r ".version" "$file")
     description=$(jq -r ".description" "$file")
-    temp_path=$($REALPATH_COMMAND --relative-to="$README_DIR" "$file")
-    file_path=$(echo "$temp_path" | sed -e 's/.././' -e 's/\/package.json//')
+    file_path=$($REALPATH_COMMAND --relative-to="$ROOT_DIR" "$file" | sed -e 's/\/package.json//')
     markdown_table+="| [$name]($file_path) | $description | \`$version\` |\n"
-done < <($FIND_COMMAND $PACKAGES_DIR -mindepth 2 -name "package.json" -type f)
+done < <($FIND_COMMAND "$PACKAGES_DIR" -mindepth 2 -name "package.json" -type f)
 
 # Replace ${package_list} to generated table from README.md
-sed -i.bak "s#\${package_list}#$markdown_table#g" $README_DIR
+sed -i.bak "s#\${package_list}#$markdown_table#g" "$README_DIR"
 
 # Remove Backup
-rm -f $README_DIR.bak
+rm -f "$README_DIR.bak"

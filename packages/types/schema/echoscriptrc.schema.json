@@ -7,33 +7,33 @@
           "type": "object",
           "properties": {
             "projectNameMaxLength": {
+              "default": 30,
               "type": "number",
-              "minimum": 1,
-              "default": 30
+              "minimum": 1
             },
             "rootProject": {
+              "default": "🔈",
               "type": "string",
-              "minLength": 1,
-              "default": "🔈"
+              "minLength": 1
             },
             "project": {
               "type": "string",
               "minLength": 1
             },
             "start": {
+              "default": "Starting script...🔥",
               "type": "string",
-              "minLength": 1,
-              "default": "Starting script...🔥"
+              "minLength": 1
             },
             "error": {
+              "default": "Error occurred ❌",
               "type": "string",
-              "minLength": 1,
-              "default": "Error occurred ❌"
+              "minLength": 1
             },
             "end": {
+              "default": "Script done ✅",
               "type": "string",
-              "minLength": 1,
-              "default": "Script done ✅"
+              "minLength": 1
             }
           }
         },
@@ -44,9 +44,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "$schema"
-          ]
+          "required": ["$schema"]
         }
       ]
     }

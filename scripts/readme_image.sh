@@ -15,14 +15,14 @@ README_DIR="$ROOT_DIR/README.md"
 BAK_README_DIR="$ROOT_DIR/README.md.bak"
 
 # Import encode_url
-source $SCRIPT_DIR/utils/encode_url.sh
+source "$SCRIPT_DIR/utils/encode_url.sh"
 
 # Hero Image
 # Inject Symbol into TEMP README
-sed "s|$ASSET_DIR|resources/$ASSET_DIR|g" $README_DIR > $BAK_README_DIR
+sed "s|$ASSET_DIR|resources/$ASSET_DIR|g" "$README_DIR" > "$BAK_README_DIR"
 
 # Override README via TEMP README
-mv $BAK_README_DIR $README_DIR
+mv "$BAK_README_DIR" "$README_DIR"
 
 # Remove Backup
-rm -f $README_DIR.bak
+rm -f "$README_DIR.bak"

@@ -6,7 +6,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "yarn@3.6.3",
+  "packageManager": "yarn@4.13.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/taeyoon0137/echoscript.git",
@@ -16,6 +16,9 @@
     "name": "Taeyoon Lee",
     "email": "taeyoon0137@gmail.com",
     "url": "https://github.com/taeyoon0137"
+  },
+  "engines": {
+    "node": ">=20.17.0"
   },
   "scripts": {
     "vscode": "yarn dlx @yarnpkg/sdks vscode",
@@ -36,14 +39,14 @@
     "version": "yarn sync:version && yarn readme"
   },
   "devDependencies": {
-    "@lerna-lite/cli": "3.3.1",
-    "@lerna-lite/publish": "^3.3.1",
-    "@lerna-lite/version": "^3.3.1",
-    "@total-typescript/ts-reset": "^0.5.1",
-    "@types/node": "^20.12.2",
-    "prettier": "^3.2.5",
-    "tsc-alias": "^1.8.8",
-    "typescript": "5.2.*",
-    "zod": "^3.22.4"
+    "@lerna-lite/cli": "^4.11.5",
+    "@lerna-lite/publish": "^4.11.5",
+    "@lerna-lite/version": "^4.11.5",
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@types/node": "^22.0.0",
+    "prettier": "^3.8.1",
+    "tsc-alias": "^1.8.16",
+    "typescript": "^5.9.0",
+    "zod": "^4.3.6"
   }
 }

@@ -8,6 +8,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "module": "ESNext",
+    "moduleResolution": "bundler",
     "rootDir": "./src",
     "baseUrl": "./src",
     "outDir": "./dist",
@@ -15,5 +16,6 @@
       "@*": ["./*"]
     }
   },
+  "include": ["src", "@types"],
   "exclude": ["dist"]
 }

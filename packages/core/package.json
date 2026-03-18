@@ -10,17 +10,16 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "yarn build:clear && yarn build:types",
-    "build:clear": "touch ./dist/temp && rm -rf ./dist/*",
+    "build:clear": "rm -rf ./dist && mkdir -p ./dist",
     "build:types": "tsc -b && tsc-alias"
   },
   "devDependencies": {
-    "@total-typescript/ts-reset": "^0.5.1",
-    "tsc-alias": "^1.8.8",
-    "typescript": "5.2.*"
+    "@total-typescript/ts-reset": "^0.6.1",
+    "tsc-alias": "^1.8.16",
+    "typescript": "^5.9.0"
   },
   "gitHead": "666f5bb6b39213db9fb8c6dd2f3f28413e7cce78",
   "dependencies": {
-    "@echoscript/types": "workspace:^",
-    "chalk": "^5.3.0"
+    "@echoscript/types": "workspace:^"
   }
 }

@@ -24,8 +24,11 @@ export function echoscript(
   script: string,
   options: EchoscriptOptions = {
     projectNameMaxLength: 30,
-  }
+  },
 ): (bracket: string, msg: string) => string {
+  const minLength = options.projectNameMaxLength;
+  const fillString = Array(minLength).fill('·').join('');
+
   return (bracket, msg) => {
     const arrow = styleConsole('→', ConsoleStyle.Black);
     const rootName = styleConsole(`[${root}]`, [ConsoleStyle.Blue, ConsoleStyle.Bold]);
@@ -40,8 +43,6 @@ export function echoscript(
      * @returns Package name with styling
      */
     function getPackageName(): string {
-      const minLength = EchoscriptOptions.parse(options)?.projectNameMaxLength;
-      const fillString = Array(minLength).fill('·').join('');
       let pkgName = `${pkg}`;
 
       // When package name length is longer than max length

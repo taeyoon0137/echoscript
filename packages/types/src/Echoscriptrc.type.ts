@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import z from 'zod';
+import { z } from 'zod';
 
 import { EchoscriptOptions } from './EchoscriptOptions.type';
 
@@ -22,7 +22,7 @@ export const Echoscriptrc = EchoscriptOptions.extend({
    *
    * @default "🔈"
    */
-  rootProject: z.string().min(1).optional().default('🔈'),
+  rootProject: z.string().min(1).default('🔈'),
 
   /**
    * ### Project Name
@@ -40,7 +40,7 @@ export const Echoscriptrc = EchoscriptOptions.extend({
    *
    * @default "Starting script...🔥"
    */
-  start: z.string().min(1).optional().default('Starting script...🔥'),
+  start: z.string().min(1).default('Starting script...🔥'),
 
   /**
    * ### Error Log
@@ -49,7 +49,7 @@ export const Echoscriptrc = EchoscriptOptions.extend({
    *
    * @default "Error occurred ❌"
    */
-  error: z.string().min(1).optional().default('Error occurred ❌'),
+  error: z.string().min(1).default('Error occurred ❌'),
 
   /**
    * ### End Log
@@ -58,7 +58,7 @@ export const Echoscriptrc = EchoscriptOptions.extend({
    *
    * @default "Script done ✅"
    */
-  end: z.string().min(1).optional().default('Script done ✅'),
+  end: z.string().min(1).default('Script done ✅'),
 });
 
 // Type Definition

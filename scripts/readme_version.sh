@@ -12,23 +12,23 @@ ROOT_DIR="$SCRIPT_DIR/.."
 # Define Resource Paths
 PACKAGE_JSON_DIR="$ROOT_DIR/package.json"
 README_DIR="$ROOT_DIR/README.md"
-PRESET_README_DIR="$ROOT_DIR/resource/README.preset.md"
+PRESET_README_DIR="$ROOT_DIR/resources/README.preset.md"
 BAK_README_DIR="$ROOT_DIR/README.md.bak"
 
 # Check is jq installed
-$SCRIPT_DIR/utils/install_jq.sh
+"$SCRIPT_DIR/utils/install_jq.sh"
 
 # Import encode_url
-source $SCRIPT_DIR/utils/encode_url.sh
+source "$SCRIPT_DIR/utils/encode_url.sh"
 
 # Get version info from lerna.json
-VERSION=$(jq -r '.version' $PACKAGE_JSON_DIR)
+VERSION=$(jq -r '.version' "$PACKAGE_JSON_DIR")
 
 # Update version to package.tmp.json
-sed "s/\${version}/$(encode_url "$VERSION")/g" $README_DIR > $BAK_README_DIR
+sed "s/\${version}/$(encode_shields_badge "$VERSION")/g" "$README_DIR" > "$BAK_README_DIR"
 
 # Override README via TEMP README
-mv $BAK_README_DIR $README_DIR
+mv "$BAK_README_DIR" "$README_DIR"
 
 # Remove Backup
-rm -f $README_DIR.bak
+rm -f "$README_DIR.bak"

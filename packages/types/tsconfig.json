@@ -14,5 +14,6 @@
       "@*": ["./*"]
     }
   },
+  "include": ["src", "@types"],
   "exclude": ["dist", "scripts"]
 }
