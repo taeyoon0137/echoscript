@@ -16,7 +16,7 @@
   "devDependencies": {
     "@total-typescript/ts-reset": "^0.6.1",
     "tsc-alias": "^1.8.16",
-    "typescript": "^5.9.0"
+    "typescript": "^5.9.3"
   },
   "gitHead": "666f5bb6b39213db9fb8c6dd2f3f28413e7cce78",
   "dependencies": {
