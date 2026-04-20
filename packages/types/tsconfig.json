@@ -7,11 +7,11 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "types": ["node"],
     "rootDir": "./src",
-    "baseUrl": "./src",
     "outDir": "./dist",
     "paths": {
-      "@*": ["./*"]
+      "@*": ["./src/*"]
     }
   },
   "include": ["src", "@types"],

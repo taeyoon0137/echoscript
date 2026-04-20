@@ -21,7 +21,7 @@
     "prettier": "^3.8.3",
     "tsc-alias": "^1.8.16",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "zod": "^4.3.6",
     "zod-to-json-schema": "^3.25.2"
   },
