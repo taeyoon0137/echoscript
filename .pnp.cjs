@@ -43,15 +43,15 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@lerna-lite/cli", "virtual:6f2bab75fa0f6af49f201c1acbbcad64c993098ea2cbb094514e5eba03b1c4199bef6ebe5f36915de5dae5e5db2485c9d4ba49fb70efdecaf56a5cb38b7c8a6b#npm:4.11.5"],\
-          ["@lerna-lite/publish", "npm:4.11.5"],\
-          ["@lerna-lite/version", "npm:4.11.5"],\
+          ["@lerna-lite/cli", "virtual:88175fb7ae1b45ff62d5b5e1ceaa40ffbf3997e3c7cebf89fd53930cf1f33525f983c7c29909ef674725820a6165f0bf680dd2c8c79720a07017debcf083e6bf#npm:5.0.0"],\
+          ["@lerna-lite/publish", "npm:5.0.0"],\
+          ["@lerna-lite/version", "npm:5.0.0"],\
           ["@total-typescript/ts-reset", "npm:0.6.1"],\
           ["@types/node", "npm:25.6.0"],\
           ["echoscript", "workspace:."],\
           ["prettier", "npm:3.8.3"],\
           ["tsc-alias", "npm:1.8.16"],\
-          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
+          ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"],\
           ["zod", "npm:4.3.6"]\
         ],\
         "linkType": "SOFT"\
@@ -124,7 +124,7 @@ const RAW_RUNTIME_STATE =
           ["@echoscript/types", "virtual:4a57ce31fbb409877957acd0bea39d9a95ad421e45ca22df9fb1e99cf28cd71616f170c31f71a707d6bac1b9545f096eb3f08b5e3089435e1e742fd029c1f713#workspace:packages/types"],\
           ["@total-typescript/ts-reset", "npm:0.6.1"],\
           ["tsc-alias", "npm:1.8.16"],\
-          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
+          ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -140,7 +140,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.8.3"],\
           ["tsc-alias", "npm:1.8.16"],\
           ["tsx", "npm:4.21.0"],\
-          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
+          ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"],\
           ["zod", "npm:4.3.6"],\
           ["zod-to-json-schema", "virtual:16a9cfb98f34a4531cabb12539f269a89fd029051df714b1b9d5dfb32b4fbd843f928ffef48c3de94aaf2ad9cc656734393ddea0193f48eefe9594af75775660#npm:3.25.2"]\
         ],\
@@ -158,7 +158,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.8.3"],\
           ["tsc-alias", "npm:1.8.16"],\
           ["tsx", "npm:4.21.0"],\
-          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
+          ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"],\
           ["zod", "npm:4.3.6"],\
           ["zod-to-json-schema", "virtual:16a9cfb98f34a4531cabb12539f269a89fd029051df714b1b9d5dfb32b4fbd843f928ffef48c3de94aaf2ad9cc656734393ddea0193f48eefe9594af75775660#npm:3.25.2"]\
         ],\
@@ -181,7 +181,7 @@ const RAW_RUNTIME_STATE =
           ["rollup", "npm:4.60.2"],\
           ["tsc-alias", "npm:1.8.16"],\
           ["tslib", "npm:2.8.1"],\
-          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
+          ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -430,35 +430,34 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@inquirer/ansi", [\
-      ["npm:1.0.2", {\
-        "packageLocation": "./.yarn/cache/@inquirer-ansi-npm-1.0.2-2fd3718a0d-d1496e573a.zip/node_modules/@inquirer/ansi/",\
+      ["npm:2.0.5", {\
+        "packageLocation": "./.yarn/cache/@inquirer-ansi-npm-2.0.5-8af5e6ad44-482f8a6068.zip/node_modules/@inquirer/ansi/",\
         "packageDependencies": [\
-          ["@inquirer/ansi", "npm:1.0.2"]\
+          ["@inquirer/ansi", "npm:2.0.5"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@inquirer/core", [\
-      ["npm:10.3.2", {\
-        "packageLocation": "./.yarn/cache/@inquirer-core-npm-10.3.2-080af5138b-eb434bdf0a.zip/node_modules/@inquirer/core/",\
+      ["npm:11.1.9", {\
+        "packageLocation": "./.yarn/cache/@inquirer-core-npm-11.1.9-6370fda053-999949afce.zip/node_modules/@inquirer/core/",\
         "packageDependencies": [\
-          ["@inquirer/core", "npm:10.3.2"]\
+          ["@inquirer/core", "npm:11.1.9"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:967dab96bf6a70af617a46b55dd9f5416ebcfdc58a72364e880ad314bd5ce5877c92726e6de3ac18a1d2b230ebd6150420ec95acedb2503a62a06109a2f64d6f#npm:10.3.2", {\
-        "packageLocation": "./.yarn/__virtual__/@inquirer-core-virtual-079efc9588/0/cache/@inquirer-core-npm-10.3.2-080af5138b-eb434bdf0a.zip/node_modules/@inquirer/core/",\
+      ["virtual:5bb519c7f7128ff28936e0e4c31f3073ef59a65a86536ac8242f1292ca230c5049c9a07e3405405d0d6cfa3b1370a8eae3d0cc178da504558c9799f9f967f239#npm:11.1.9", {\
+        "packageLocation": "./.yarn/__virtual__/@inquirer-core-virtual-b68a0fb6e8/0/cache/@inquirer-core-npm-11.1.9-6370fda053-999949afce.zip/node_modules/@inquirer/core/",\
         "packageDependencies": [\
-          ["@inquirer/ansi", "npm:1.0.2"],\
-          ["@inquirer/core", "virtual:967dab96bf6a70af617a46b55dd9f5416ebcfdc58a72364e880ad314bd5ce5877c92726e6de3ac18a1d2b230ebd6150420ec95acedb2503a62a06109a2f64d6f#npm:10.3.2"],\
-          ["@inquirer/figures", "npm:1.0.15"],\
-          ["@inquirer/type", "virtual:967dab96bf6a70af617a46b55dd9f5416ebcfdc58a72364e880ad314bd5ce5877c92726e6de3ac18a1d2b230ebd6150420ec95acedb2503a62a06109a2f64d6f#npm:3.0.10"],\
+          ["@inquirer/ansi", "npm:2.0.5"],\
+          ["@inquirer/core", "virtual:5bb519c7f7128ff28936e0e4c31f3073ef59a65a86536ac8242f1292ca230c5049c9a07e3405405d0d6cfa3b1370a8eae3d0cc178da504558c9799f9f967f239#npm:11.1.9"],\
+          ["@inquirer/figures", "npm:2.0.5"],\
+          ["@inquirer/type", "virtual:5bb519c7f7128ff28936e0e4c31f3073ef59a65a86536ac8242f1292ca230c5049c9a07e3405405d0d6cfa3b1370a8eae3d0cc178da504558c9799f9f967f239#npm:4.0.5"],\
           ["@types/node", null],\
           ["cli-width", "npm:4.1.0"],\
-          ["mute-stream", "npm:2.0.0"],\
-          ["signal-exit", "npm:4.1.0"],\
-          ["wrap-ansi", "npm:6.2.0"],\
-          ["yoctocolors-cjs", "npm:2.1.3"]\
+          ["fast-wrap-ansi", "npm:0.2.0"],\
+          ["mute-stream", "npm:3.0.0"],\
+          ["signal-exit", "npm:4.1.0"]\
         ],\
         "packagePeers": [\
           "@types/node"\
@@ -467,21 +466,20 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@inquirer/expand", [\
-      ["npm:4.0.23", {\
-        "packageLocation": "./.yarn/cache/@inquirer-expand-npm-4.0.23-a02206e3c0-73ad1d6376.zip/node_modules/@inquirer/expand/",\
+      ["npm:5.0.13", {\
+        "packageLocation": "./.yarn/cache/@inquirer-expand-npm-5.0.13-9645f11b14-6a7335a568.zip/node_modules/@inquirer/expand/",\
         "packageDependencies": [\
-          ["@inquirer/expand", "npm:4.0.23"]\
+          ["@inquirer/expand", "npm:5.0.13"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:4.0.23", {\
-        "packageLocation": "./.yarn/__virtual__/@inquirer-expand-virtual-967dab96bf/0/cache/@inquirer-expand-npm-4.0.23-a02206e3c0-73ad1d6376.zip/node_modules/@inquirer/expand/",\
+      ["virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:5.0.13", {\
+        "packageLocation": "./.yarn/__virtual__/@inquirer-expand-virtual-5bb519c7f7/0/cache/@inquirer-expand-npm-5.0.13-9645f11b14-6a7335a568.zip/node_modules/@inquirer/expand/",\
         "packageDependencies": [\
-          ["@inquirer/core", "virtual:967dab96bf6a70af617a46b55dd9f5416ebcfdc58a72364e880ad314bd5ce5877c92726e6de3ac18a1d2b230ebd6150420ec95acedb2503a62a06109a2f64d6f#npm:10.3.2"],\
-          ["@inquirer/expand", "virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:4.0.23"],\
-          ["@inquirer/type", "virtual:967dab96bf6a70af617a46b55dd9f5416ebcfdc58a72364e880ad314bd5ce5877c92726e6de3ac18a1d2b230ebd6150420ec95acedb2503a62a06109a2f64d6f#npm:3.0.10"],\
-          ["@types/node", null],\
-          ["yoctocolors-cjs", "npm:2.1.3"]\
+          ["@inquirer/core", "virtual:5bb519c7f7128ff28936e0e4c31f3073ef59a65a86536ac8242f1292ca230c5049c9a07e3405405d0d6cfa3b1370a8eae3d0cc178da504558c9799f9f967f239#npm:11.1.9"],\
+          ["@inquirer/expand", "virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:5.0.13"],\
+          ["@inquirer/type", "virtual:5bb519c7f7128ff28936e0e4c31f3073ef59a65a86536ac8242f1292ca230c5049c9a07e3405405d0d6cfa3b1370a8eae3d0cc178da504558c9799f9f967f239#npm:4.0.5"],\
+          ["@types/node", null]\
         ],\
         "packagePeers": [\
           "@types/node"\
@@ -490,28 +488,28 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@inquirer/figures", [\
-      ["npm:1.0.15", {\
-        "packageLocation": "./.yarn/cache/@inquirer-figures-npm-1.0.15-827ac9c003-3f858807f3.zip/node_modules/@inquirer/figures/",\
+      ["npm:2.0.5", {\
+        "packageLocation": "./.yarn/cache/@inquirer-figures-npm-2.0.5-6cb995d689-e4d09c11a7.zip/node_modules/@inquirer/figures/",\
         "packageDependencies": [\
-          ["@inquirer/figures", "npm:1.0.15"]\
+          ["@inquirer/figures", "npm:2.0.5"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@inquirer/input", [\
-      ["npm:4.3.1", {\
-        "packageLocation": "./.yarn/cache/@inquirer-input-npm-4.3.1-460fa71adb-713aaa4c94.zip/node_modules/@inquirer/input/",\
+      ["npm:5.0.12", {\
+        "packageLocation": "./.yarn/cache/@inquirer-input-npm-5.0.12-74e072e874-2a0c987442.zip/node_modules/@inquirer/input/",\
         "packageDependencies": [\
-          ["@inquirer/input", "npm:4.3.1"]\
+          ["@inquirer/input", "npm:5.0.12"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:4.3.1", {\
-        "packageLocation": "./.yarn/__virtual__/@inquirer-input-virtual-0a7c52c276/0/cache/@inquirer-input-npm-4.3.1-460fa71adb-713aaa4c94.zip/node_modules/@inquirer/input/",\
+      ["virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:5.0.12", {\
+        "packageLocation": "./.yarn/__virtual__/@inquirer-input-virtual-226d59c712/0/cache/@inquirer-input-npm-5.0.12-74e072e874-2a0c987442.zip/node_modules/@inquirer/input/",\
         "packageDependencies": [\
-          ["@inquirer/core", "virtual:967dab96bf6a70af617a46b55dd9f5416ebcfdc58a72364e880ad314bd5ce5877c92726e6de3ac18a1d2b230ebd6150420ec95acedb2503a62a06109a2f64d6f#npm:10.3.2"],\
-          ["@inquirer/input", "virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:4.3.1"],\
-          ["@inquirer/type", "virtual:967dab96bf6a70af617a46b55dd9f5416ebcfdc58a72364e880ad314bd5ce5877c92726e6de3ac18a1d2b230ebd6150420ec95acedb2503a62a06109a2f64d6f#npm:3.0.10"],\
+          ["@inquirer/core", "virtual:5bb519c7f7128ff28936e0e4c31f3073ef59a65a86536ac8242f1292ca230c5049c9a07e3405405d0d6cfa3b1370a8eae3d0cc178da504558c9799f9f967f239#npm:11.1.9"],\
+          ["@inquirer/input", "virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:5.0.12"],\
+          ["@inquirer/type", "virtual:5bb519c7f7128ff28936e0e4c31f3073ef59a65a86536ac8242f1292ca230c5049c9a07e3405405d0d6cfa3b1370a8eae3d0cc178da504558c9799f9f967f239#npm:4.0.5"],\
           ["@types/node", null]\
         ],\
         "packagePeers": [\
@@ -521,23 +519,22 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@inquirer/select", [\
-      ["npm:4.4.2", {\
-        "packageLocation": "./.yarn/cache/@inquirer-select-npm-4.4.2-4343cba5a2-795ec0ac77.zip/node_modules/@inquirer/select/",\
+      ["npm:5.1.4", {\
+        "packageLocation": "./.yarn/cache/@inquirer-select-npm-5.1.4-fb1f5b4e9d-e11893e979.zip/node_modules/@inquirer/select/",\
         "packageDependencies": [\
-          ["@inquirer/select", "npm:4.4.2"]\
+          ["@inquirer/select", "npm:5.1.4"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:4.4.2", {\
-        "packageLocation": "./.yarn/__virtual__/@inquirer-select-virtual-c81cf5cce6/0/cache/@inquirer-select-npm-4.4.2-4343cba5a2-795ec0ac77.zip/node_modules/@inquirer/select/",\
+      ["virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:5.1.4", {\
+        "packageLocation": "./.yarn/__virtual__/@inquirer-select-virtual-b2dc7928c4/0/cache/@inquirer-select-npm-5.1.4-fb1f5b4e9d-e11893e979.zip/node_modules/@inquirer/select/",\
         "packageDependencies": [\
-          ["@inquirer/ansi", "npm:1.0.2"],\
-          ["@inquirer/core", "virtual:967dab96bf6a70af617a46b55dd9f5416ebcfdc58a72364e880ad314bd5ce5877c92726e6de3ac18a1d2b230ebd6150420ec95acedb2503a62a06109a2f64d6f#npm:10.3.2"],\
-          ["@inquirer/figures", "npm:1.0.15"],\
-          ["@inquirer/select", "virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:4.4.2"],\
-          ["@inquirer/type", "virtual:967dab96bf6a70af617a46b55dd9f5416ebcfdc58a72364e880ad314bd5ce5877c92726e6de3ac18a1d2b230ebd6150420ec95acedb2503a62a06109a2f64d6f#npm:3.0.10"],\
-          ["@types/node", null],\
-          ["yoctocolors-cjs", "npm:2.1.3"]\
+          ["@inquirer/ansi", "npm:2.0.5"],\
+          ["@inquirer/core", "virtual:5bb519c7f7128ff28936e0e4c31f3073ef59a65a86536ac8242f1292ca230c5049c9a07e3405405d0d6cfa3b1370a8eae3d0cc178da504558c9799f9f967f239#npm:11.1.9"],\
+          ["@inquirer/figures", "npm:2.0.5"],\
+          ["@inquirer/select", "virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:5.1.4"],\
+          ["@inquirer/type", "virtual:5bb519c7f7128ff28936e0e4c31f3073ef59a65a86536ac8242f1292ca230c5049c9a07e3405405d0d6cfa3b1370a8eae3d0cc178da504558c9799f9f967f239#npm:4.0.5"],\
+          ["@types/node", null]\
         ],\
         "packagePeers": [\
           "@types/node"\
@@ -546,17 +543,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@inquirer/type", [\
-      ["npm:3.0.10", {\
-        "packageLocation": "./.yarn/cache/@inquirer-type-npm-3.0.10-189a7e69b4-57d113a9db.zip/node_modules/@inquirer/type/",\
+      ["npm:4.0.5", {\
+        "packageLocation": "./.yarn/cache/@inquirer-type-npm-4.0.5-c68ee3257f-83d15e11cc.zip/node_modules/@inquirer/type/",\
         "packageDependencies": [\
-          ["@inquirer/type", "npm:3.0.10"]\
+          ["@inquirer/type", "npm:4.0.5"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:967dab96bf6a70af617a46b55dd9f5416ebcfdc58a72364e880ad314bd5ce5877c92726e6de3ac18a1d2b230ebd6150420ec95acedb2503a62a06109a2f64d6f#npm:3.0.10", {\
-        "packageLocation": "./.yarn/__virtual__/@inquirer-type-virtual-8998568754/0/cache/@inquirer-type-npm-3.0.10-189a7e69b4-57d113a9db.zip/node_modules/@inquirer/type/",\
+      ["virtual:5bb519c7f7128ff28936e0e4c31f3073ef59a65a86536ac8242f1292ca230c5049c9a07e3405405d0d6cfa3b1370a8eae3d0cc178da504558c9799f9f967f239#npm:4.0.5", {\
+        "packageLocation": "./.yarn/__virtual__/@inquirer-type-virtual-8aa62f028c/0/cache/@inquirer-type-npm-4.0.5-c68ee3257f-83d15e11cc.zip/node_modules/@inquirer/type/",\
         "packageDependencies": [\
-          ["@inquirer/type", "virtual:967dab96bf6a70af617a46b55dd9f5416ebcfdc58a72364e880ad314bd5ce5877c92726e6de3ac18a1d2b230ebd6150420ec95acedb2503a62a06109a2f64d6f#npm:3.0.10"],\
+          ["@inquirer/type", "virtual:5bb519c7f7128ff28936e0e4c31f3073ef59a65a86536ac8242f1292ca230c5049c9a07e3405405d0d6cfa3b1370a8eae3d0cc178da504558c9799f9f967f239#npm:4.0.5"],\
           ["@types/node", null]\
         ],\
         "packagePeers": [\
@@ -636,25 +633,25 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@lerna-lite/cli", [\
-      ["npm:4.11.5", {\
-        "packageLocation": "./.yarn/cache/@lerna-lite-cli-npm-4.11.5-117f2ba639-7aa69a97e4.zip/node_modules/@lerna-lite/cli/",\
+      ["npm:5.0.0", {\
+        "packageLocation": "./.yarn/cache/@lerna-lite-cli-npm-5.0.0-4fe09dabf9-9e743da846.zip/node_modules/@lerna-lite/cli/",\
         "packageDependencies": [\
-          ["@lerna-lite/cli", "npm:4.11.5"]\
+          ["@lerna-lite/cli", "npm:5.0.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:6e3e7d3cb670f4c5daa23b0d02f47586f03534331f55a8fb0983cf294703e6038088e7e70d2af2f7dfe9bc874a40bf09738db1daf94dedd8301500322efa1513#npm:4.11.5", {\
-        "packageLocation": "./.yarn/__virtual__/@lerna-lite-cli-virtual-a7e0b4c3cd/0/cache/@lerna-lite-cli-npm-4.11.5-117f2ba639-7aa69a97e4.zip/node_modules/@lerna-lite/cli/",\
+      ["virtual:88175fb7ae1b45ff62d5b5e1ceaa40ffbf3997e3c7cebf89fd53930cf1f33525f983c7c29909ef674725820a6165f0bf680dd2c8c79720a07017debcf083e6bf#npm:5.0.0", {\
+        "packageLocation": "./.yarn/__virtual__/@lerna-lite-cli-virtual-1222064b8f/0/cache/@lerna-lite-cli-npm-5.0.0-4fe09dabf9-9e743da846.zip/node_modules/@lerna-lite/cli/",\
         "packageDependencies": [\
-          ["@lerna-lite/cli", "virtual:6e3e7d3cb670f4c5daa23b0d02f47586f03534331f55a8fb0983cf294703e6038088e7e70d2af2f7dfe9bc874a40bf09738db1daf94dedd8301500322efa1513#npm:4.11.5"],\
-          ["@lerna-lite/core", "npm:4.11.5"],\
+          ["@lerna-lite/cli", "virtual:88175fb7ae1b45ff62d5b5e1ceaa40ffbf3997e3c7cebf89fd53930cf1f33525f983c7c29909ef674725820a6165f0bf680dd2c8c79720a07017debcf083e6bf#npm:5.0.0"],\
+          ["@lerna-lite/core", "npm:5.0.0"],\
           ["@lerna-lite/exec", null],\
-          ["@lerna-lite/init", "npm:4.11.5"],\
+          ["@lerna-lite/init", "npm:5.0.0"],\
           ["@lerna-lite/list", null],\
-          ["@lerna-lite/npmlog", "npm:4.11.5"],\
-          ["@lerna-lite/publish", null],\
+          ["@lerna-lite/npmlog", "npm:5.0.0"],\
+          ["@lerna-lite/publish", "npm:5.0.0"],\
           ["@lerna-lite/run", null],\
-          ["@lerna-lite/version", "npm:4.11.5"],\
+          ["@lerna-lite/version", "npm:5.0.0"],\
           ["@lerna-lite/watch", null],\
           ["@types/lerna-lite__exec", null],\
           ["@types/lerna-lite__list", null],\
@@ -662,7 +659,7 @@ const RAW_RUNTIME_STATE =
           ["@types/lerna-lite__run", null],\
           ["@types/lerna-lite__version", null],\
           ["@types/lerna-lite__watch", null],\
-          ["dedent", "virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:1.7.2"],\
+          ["dedent", "virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:1.7.2"],\
           ["dotenv", "npm:17.4.2"],\
           ["import-local", "npm:3.2.0"],\
           ["load-json-file", "npm:7.0.1"],\
@@ -684,18 +681,18 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:6f2bab75fa0f6af49f201c1acbbcad64c993098ea2cbb094514e5eba03b1c4199bef6ebe5f36915de5dae5e5db2485c9d4ba49fb70efdecaf56a5cb38b7c8a6b#npm:4.11.5", {\
-        "packageLocation": "./.yarn/__virtual__/@lerna-lite-cli-virtual-67b18025a3/0/cache/@lerna-lite-cli-npm-4.11.5-117f2ba639-7aa69a97e4.zip/node_modules/@lerna-lite/cli/",\
+      ["virtual:ae983da7bc25fd31f86488023bed21c8917659edf72779cc74dfbe5a6512f99302f4b6328aee06b1c0c39bfb594bb5541822fadf7859ba977b899f73b8df5dd4#npm:5.0.0", {\
+        "packageLocation": "./.yarn/__virtual__/@lerna-lite-cli-virtual-31a8926b6b/0/cache/@lerna-lite-cli-npm-5.0.0-4fe09dabf9-9e743da846.zip/node_modules/@lerna-lite/cli/",\
         "packageDependencies": [\
-          ["@lerna-lite/cli", "virtual:6f2bab75fa0f6af49f201c1acbbcad64c993098ea2cbb094514e5eba03b1c4199bef6ebe5f36915de5dae5e5db2485c9d4ba49fb70efdecaf56a5cb38b7c8a6b#npm:4.11.5"],\
-          ["@lerna-lite/core", "npm:4.11.5"],\
+          ["@lerna-lite/cli", "virtual:ae983da7bc25fd31f86488023bed21c8917659edf72779cc74dfbe5a6512f99302f4b6328aee06b1c0c39bfb594bb5541822fadf7859ba977b899f73b8df5dd4#npm:5.0.0"],\
+          ["@lerna-lite/core", "npm:5.0.0"],\
           ["@lerna-lite/exec", null],\
-          ["@lerna-lite/init", "npm:4.11.5"],\
+          ["@lerna-lite/init", "npm:5.0.0"],\
           ["@lerna-lite/list", null],\
-          ["@lerna-lite/npmlog", "npm:4.11.5"],\
-          ["@lerna-lite/publish", "npm:4.11.5"],\
+          ["@lerna-lite/npmlog", "npm:5.0.0"],\
+          ["@lerna-lite/publish", null],\
           ["@lerna-lite/run", null],\
-          ["@lerna-lite/version", "npm:4.11.5"],\
+          ["@lerna-lite/version", "npm:5.0.0"],\
           ["@lerna-lite/watch", null],\
           ["@types/lerna-lite__exec", null],\
           ["@types/lerna-lite__list", null],\
@@ -703,7 +700,7 @@ const RAW_RUNTIME_STATE =
           ["@types/lerna-lite__run", null],\
           ["@types/lerna-lite__version", null],\
           ["@types/lerna-lite__watch", null],\
-          ["dedent", "virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:1.7.2"],\
+          ["dedent", "virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:1.7.2"],\
           ["dotenv", "npm:17.4.2"],\
           ["import-local", "npm:3.2.0"],\
           ["load-json-file", "npm:7.0.1"],\
@@ -727,20 +724,19 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@lerna-lite/core", [\
-      ["npm:4.11.5", {\
-        "packageLocation": "./.yarn/cache/@lerna-lite-core-npm-4.11.5-2e9d837bbb-4b26c3b8b4.zip/node_modules/@lerna-lite/core/",\
+      ["npm:5.0.0", {\
+        "packageLocation": "./.yarn/cache/@lerna-lite-core-npm-5.0.0-9f710a1887-1aa7583c3f.zip/node_modules/@lerna-lite/core/",\
         "packageDependencies": [\
-          ["@inquirer/expand", "virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:4.0.23"],\
-          ["@inquirer/input", "virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:4.3.1"],\
-          ["@inquirer/select", "virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:4.4.2"],\
-          ["@lerna-lite/core", "npm:4.11.5"],\
-          ["@lerna-lite/npmlog", "npm:4.11.5"],\
+          ["@inquirer/expand", "virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:5.0.13"],\
+          ["@inquirer/input", "virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:5.0.12"],\
+          ["@inquirer/select", "virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:5.1.4"],\
+          ["@lerna-lite/core", "npm:5.0.0"],\
+          ["@lerna-lite/npmlog", "npm:5.0.0"],\
           ["@npmcli/run-script", "npm:10.0.4"],\
           ["ci-info", "npm:4.4.0"],\
-          ["dedent", "virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:1.7.2"],\
+          ["dedent", "virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:1.7.2"],\
           ["execa", "npm:9.6.1"],\
           ["fs-extra", "npm:11.3.4"],\
-          ["glob-parent", "npm:6.0.2"],\
           ["json5", "npm:2.2.3"],\
           ["lilconfig", "npm:3.1.3"],\
           ["load-json-file", "npm:7.0.1"],\
@@ -749,7 +745,6 @@ const RAW_RUNTIME_STATE =
           ["p-queue", "npm:9.1.2"],\
           ["semver", "npm:7.7.4"],\
           ["tinyglobby", "npm:0.2.16"],\
-          ["tinyrainbow", "npm:3.1.0"],\
           ["write-file-atomic", "npm:7.0.1"],\
           ["write-json-file", "npm:7.0.0"],\
           ["yaml", "npm:2.8.3"],\
@@ -759,11 +754,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@lerna-lite/init", [\
-      ["npm:4.11.5", {\
-        "packageLocation": "./.yarn/cache/@lerna-lite-init-npm-4.11.5-3eb508da58-5973acd1ee.zip/node_modules/@lerna-lite/init/",\
+      ["npm:5.0.0", {\
+        "packageLocation": "./.yarn/cache/@lerna-lite-init-npm-5.0.0-4c408a94e4-23448ca678.zip/node_modules/@lerna-lite/init/",\
         "packageDependencies": [\
-          ["@lerna-lite/core", "npm:4.11.5"],\
-          ["@lerna-lite/init", "npm:4.11.5"],\
+          ["@lerna-lite/core", "npm:5.0.0"],\
+          ["@lerna-lite/init", "npm:5.0.0"],\
           ["fs-extra", "npm:11.3.4"],\
           ["p-map", "npm:7.0.4"],\
           ["write-json-file", "npm:7.0.0"]\
@@ -772,36 +767,30 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@lerna-lite/npmlog", [\
-      ["npm:4.11.5", {\
-        "packageLocation": "./.yarn/cache/@lerna-lite-npmlog-npm-4.11.5-5b04ee3af2-8a8d3c8d44.zip/node_modules/@lerna-lite/npmlog/",\
+      ["npm:5.0.0", {\
+        "packageLocation": "./.yarn/cache/@lerna-lite-npmlog-npm-5.0.0-dbb24879c3-d0b92fd270.zip/node_modules/@lerna-lite/npmlog/",\
         "packageDependencies": [\
-          ["@lerna-lite/npmlog", "npm:4.11.5"],\
-          ["aproba", "npm:2.1.0"],\
+          ["@lerna-lite/npmlog", "npm:5.0.0"],\
           ["fast-string-width", "npm:3.0.2"],\
-          ["has-unicode", "npm:2.0.1"],\
-          ["signal-exit", "npm:4.1.0"],\
-          ["tinyrainbow", "npm:3.1.0"],\
-          ["wide-align", "npm:1.1.5"]\
+          ["signal-exit", "npm:4.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@lerna-lite/publish", [\
-      ["npm:4.11.5", {\
-        "packageLocation": "./.yarn/cache/@lerna-lite-publish-npm-4.11.5-6f2bab75fa-2cf3fe12fe.zip/node_modules/@lerna-lite/publish/",\
+      ["npm:5.0.0", {\
+        "packageLocation": "./.yarn/cache/@lerna-lite-publish-npm-5.0.0-88175fb7ae-30e1a252b0.zip/node_modules/@lerna-lite/publish/",\
         "packageDependencies": [\
-          ["@lerna-lite/cli", "virtual:6f2bab75fa0f6af49f201c1acbbcad64c993098ea2cbb094514e5eba03b1c4199bef6ebe5f36915de5dae5e5db2485c9d4ba49fb70efdecaf56a5cb38b7c8a6b#npm:4.11.5"],\
-          ["@lerna-lite/core", "npm:4.11.5"],\
-          ["@lerna-lite/npmlog", "npm:4.11.5"],\
-          ["@lerna-lite/publish", "npm:4.11.5"],\
-          ["@lerna-lite/version", "npm:4.11.5"],\
+          ["@lerna-lite/cli", "virtual:88175fb7ae1b45ff62d5b5e1ceaa40ffbf3997e3c7cebf89fd53930cf1f33525f983c7c29909ef674725820a6165f0bf680dd2c8c79720a07017debcf083e6bf#npm:5.0.0"],\
+          ["@lerna-lite/core", "npm:5.0.0"],\
+          ["@lerna-lite/npmlog", "npm:5.0.0"],\
+          ["@lerna-lite/publish", "npm:5.0.0"],\
+          ["@lerna-lite/version", "npm:5.0.0"],\
           ["@npmcli/arborist", "npm:9.4.2"],\
           ["@npmcli/package-json", "npm:7.0.5"],\
-          ["byte-size", "virtual:6f2bab75fa0f6af49f201c1acbbcad64c993098ea2cbb094514e5eba03b1c4199bef6ebe5f36915de5dae5e5db2485c9d4ba49fb70efdecaf56a5cb38b7c8a6b#npm:9.0.1"],\
           ["ci-info", "npm:4.4.0"],\
           ["columnify", "npm:1.6.0"],\
           ["fs-extra", "npm:11.3.4"],\
-          ["has-unicode", "npm:2.0.1"],\
           ["libnpmaccess", "npm:10.0.3"],\
           ["libnpmpublish", "npm:11.1.3"],\
           ["normalize-path", "npm:3.0.0"],\
@@ -813,21 +802,20 @@ const RAW_RUNTIME_STATE =
           ["semver", "npm:7.7.4"],\
           ["ssri", "npm:13.0.1"],\
           ["tar", "npm:7.5.13"],\
-          ["tinyglobby", "npm:0.2.16"],\
-          ["tinyrainbow", "npm:3.1.0"]\
+          ["tinyglobby", "npm:0.2.16"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@lerna-lite/version", [\
-      ["npm:4.11.5", {\
-        "packageLocation": "./.yarn/cache/@lerna-lite-version-npm-4.11.5-6e3e7d3cb6-ed2af7c2e7.zip/node_modules/@lerna-lite/version/",\
+      ["npm:5.0.0", {\
+        "packageLocation": "./.yarn/cache/@lerna-lite-version-npm-5.0.0-ae983da7bc-f1207d7a9b.zip/node_modules/@lerna-lite/version/",\
         "packageDependencies": [\
           ["@conventional-changelog/git-client", "virtual:55e936bc4b649b560f95bbe8575c42e34e2e57a0eabb997969611bfc956a37935e3247b6b18c0c274f1858db5e3ba92f8350e5b96f12c3083ba6006516667422#npm:2.7.0"],\
-          ["@lerna-lite/cli", "virtual:6e3e7d3cb670f4c5daa23b0d02f47586f03534331f55a8fb0983cf294703e6038088e7e70d2af2f7dfe9bc874a40bf09738db1daf94dedd8301500322efa1513#npm:4.11.5"],\
-          ["@lerna-lite/core", "npm:4.11.5"],\
-          ["@lerna-lite/npmlog", "npm:4.11.5"],\
-          ["@lerna-lite/version", "npm:4.11.5"],\
+          ["@lerna-lite/cli", "virtual:ae983da7bc25fd31f86488023bed21c8917659edf72779cc74dfbe5a6512f99302f4b6328aee06b1c0c39bfb594bb5541822fadf7859ba977b899f73b8df5dd4#npm:5.0.0"],\
+          ["@lerna-lite/core", "npm:5.0.0"],\
+          ["@lerna-lite/npmlog", "npm:5.0.0"],\
+          ["@lerna-lite/version", "npm:5.0.0"],\
           ["@octokit/plugin-enterprise-rest", "npm:6.0.1"],\
           ["@octokit/rest", "npm:22.0.1"],\
           ["conventional-changelog", "npm:7.2.0"],\
@@ -835,7 +823,7 @@ const RAW_RUNTIME_STATE =
           ["conventional-changelog-writer", "npm:8.4.0"],\
           ["conventional-commits-parser", "npm:6.4.0"],\
           ["conventional-recommended-bump", "npm:11.2.0"],\
-          ["dedent", "virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:1.7.2"],\
+          ["dedent", "virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:1.7.2"],\
           ["fs-extra", "npm:11.3.4"],\
           ["git-url-parse", "npm:16.1.0"],\
           ["load-json-file", "npm:7.0.1"],\
@@ -844,7 +832,6 @@ const RAW_RUNTIME_STATE =
           ["p-limit", "npm:7.3.0"],\
           ["p-map", "npm:7.0.4"],\
           ["semver", "npm:7.7.4"],\
-          ["tinyrainbow", "npm:3.1.0"],\
           ["write-json-file", "npm:7.0.0"],\
           ["zeptomatch", "npm:2.1.0"]\
         ],\
@@ -1363,7 +1350,7 @@ const RAW_RUNTIME_STATE =
           ["resolve", "patch:resolve@npm%3A1.22.12#optional!builtin<compat/resolve>::version=1.22.12&hash=c3c19d"],\
           ["rollup", "npm:4.60.2"],\
           ["tslib", "npm:2.8.1"],\
-          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
+          ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"]\
         ],\
         "packagePeers": [\
           "@types/rollup",\
@@ -2069,15 +2056,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["aproba", [\
-      ["npm:2.1.0", {\
-        "packageLocation": "./.yarn/cache/aproba-npm-2.1.0-6cb03e605b-cb0e335ac3.zip/node_modules/aproba/",\
-        "packageDependencies": [\
-          ["aproba", "npm:2.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["argparse", [\
       ["npm:1.0.10", {\
         "packageLocation": "./.yarn/cache/argparse-npm-1.0.10-528934e59d-c6a621343a.zip/node_modules/argparse/",\
@@ -2172,28 +2150,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/buffer-from-npm-1.1.2-03d2f20d7e-0448524a56.zip/node_modules/buffer-from/",\
         "packageDependencies": [\
           ["buffer-from", "npm:1.1.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["byte-size", [\
-      ["npm:9.0.1", {\
-        "packageLocation": "./.yarn/cache/byte-size-npm-9.0.1-1dd2d053d7-9554cb40e6.zip/node_modules/byte-size/",\
-        "packageDependencies": [\
-          ["byte-size", "npm:9.0.1"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:6f2bab75fa0f6af49f201c1acbbcad64c993098ea2cbb094514e5eba03b1c4199bef6ebe5f36915de5dae5e5db2485c9d4ba49fb70efdecaf56a5cb38b7c8a6b#npm:9.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/byte-size-virtual-ffc8e45677/0/cache/byte-size-npm-9.0.1-1dd2d053d7-9554cb40e6.zip/node_modules/byte-size/",\
-        "packageDependencies": [\
-          ["@75lb/nature", null],\
-          ["@types/75lb__nature", null],\
-          ["byte-size", "virtual:6f2bab75fa0f6af49f201c1acbbcad64c993098ea2cbb094514e5eba03b1c4199bef6ebe5f36915de5dae5e5db2485c9d4ba49fb70efdecaf56a5cb38b7c8a6b#npm:9.0.1"]\
-        ],\
-        "packagePeers": [\
-          "@75lb/nature",\
-          "@types/75lb__nature"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2589,12 +2545,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:1.7.2", {\
-        "packageLocation": "./.yarn/__virtual__/dedent-virtual-6380def446/0/cache/dedent-npm-1.7.2-32d3f9ce4a-30b9062290.zip/node_modules/dedent/",\
+      ["virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:1.7.2", {\
+        "packageLocation": "./.yarn/__virtual__/dedent-virtual-ae48e12ed0/0/cache/dedent-npm-1.7.2-32d3f9ce4a-30b9062290.zip/node_modules/dedent/",\
         "packageDependencies": [\
           ["@types/babel-plugin-macros", null],\
           ["babel-plugin-macros", null],\
-          ["dedent", "virtual:2e9d837bbb7fd0baef566280127a85896d59c115a32e549cdbfa7ee067412bf885c10e11e50bfcf1231a96ff02ea3cba01b96acdec9fbb2fd54620c28851038a#npm:1.7.2"]\
+          ["dedent", "virtual:9f710a1887844b6e164059067e3e9c2b7dd08f92b9df7241cc7bae6c20364e63adfc0f82853740601fd0aefd2f66381fce3ad5bb2005145185d1e3951df8afc1#npm:1.7.2"]\
         ],\
         "packagePeers": [\
           "@types/babel-plugin-macros",\
@@ -2689,15 +2645,15 @@ const RAW_RUNTIME_STATE =
       ["workspace:.", {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@lerna-lite/cli", "virtual:6f2bab75fa0f6af49f201c1acbbcad64c993098ea2cbb094514e5eba03b1c4199bef6ebe5f36915de5dae5e5db2485c9d4ba49fb70efdecaf56a5cb38b7c8a6b#npm:4.11.5"],\
-          ["@lerna-lite/publish", "npm:4.11.5"],\
-          ["@lerna-lite/version", "npm:4.11.5"],\
+          ["@lerna-lite/cli", "virtual:88175fb7ae1b45ff62d5b5e1ceaa40ffbf3997e3c7cebf89fd53930cf1f33525f983c7c29909ef674725820a6165f0bf680dd2c8c79720a07017debcf083e6bf#npm:5.0.0"],\
+          ["@lerna-lite/publish", "npm:5.0.0"],\
+          ["@lerna-lite/version", "npm:5.0.0"],\
           ["@total-typescript/ts-reset", "npm:0.6.1"],\
           ["@types/node", "npm:25.6.0"],\
           ["echoscript", "workspace:."],\
           ["prettier", "npm:3.8.3"],\
           ["tsc-alias", "npm:1.8.16"],\
-          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
+          ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"],\
           ["zod", "npm:4.3.6"]\
         ],\
         "linkType": "SOFT"\
@@ -2708,13 +2664,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/emoji-regex-npm-10.6.0-c849a5dbe0-98cc0b0e1d.zip/node_modules/emoji-regex/",\
         "packageDependencies": [\
           ["emoji-regex", "npm:10.6.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:8.0.0", {\
-        "packageLocation": "./.yarn/cache/emoji-regex-npm-8.0.0-213764015c-c72d67a682.zip/node_modules/emoji-regex/",\
-        "packageDependencies": [\
-          ["emoji-regex", "npm:8.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2895,6 +2844,16 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["fast-string-truncated-width", "npm:3.0.3"],\
           ["fast-string-width", "npm:3.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["fast-wrap-ansi", [\
+      ["npm:0.2.0", {\
+        "packageLocation": "./.yarn/cache/fast-wrap-ansi-npm-0.2.0-11e4628564-e717a249da.zip/node_modules/fast-wrap-ansi/",\
+        "packageDependencies": [\
+          ["fast-string-width", "npm:3.0.2"],\
+          ["fast-wrap-ansi", "npm:0.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3101,14 +3060,6 @@ const RAW_RUNTIME_STATE =
           ["is-glob", "npm:4.0.3"]\
         ],\
         "linkType": "HARD"\
-      }],\
-      ["npm:6.0.2", {\
-        "packageLocation": "./.yarn/cache/glob-parent-npm-6.0.2-2cbef12738-c13ee97978.zip/node_modules/glob-parent/",\
-        "packageDependencies": [\
-          ["glob-parent", "npm:6.0.2"],\
-          ["is-glob", "npm:4.0.3"]\
-        ],\
-        "linkType": "HARD"\
       }]\
     ]],\
     ["globby", [\
@@ -3201,15 +3152,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/has-flag-npm-4.0.0-32af9f0536-261a135703.zip/node_modules/has-flag/",\
         "packageDependencies": [\
           ["has-flag", "npm:4.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["has-unicode", [\
-      ["npm:2.0.1", {\
-        "packageLocation": "./.yarn/cache/has-unicode-npm-2.0.1-893adb4747-041b4293ad.zip/node_modules/has-unicode/",\
-        "packageDependencies": [\
-          ["has-unicode", "npm:2.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3394,15 +3336,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/is-extglob-npm-2.1.1-0870ea68b5-df033653d0.zip/node_modules/is-extglob/",\
         "packageDependencies": [\
           ["is-extglob", "npm:2.1.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["is-fullwidth-code-point", [\
-      ["npm:3.0.0", {\
-        "packageLocation": "./.yarn/cache/is-fullwidth-code-point-npm-3.0.0-1ecf4ebee5-44a30c2945.zip/node_modules/is-fullwidth-code-point/",\
-        "packageDependencies": [\
-          ["is-fullwidth-code-point", "npm:3.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3877,10 +3810,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["mute-stream", [\
-      ["npm:2.0.0", {\
-        "packageLocation": "./.yarn/cache/mute-stream-npm-2.0.0-45d3c1ef83-d2e4fd2f5a.zip/node_modules/mute-stream/",\
+      ["npm:3.0.0", {\
+        "packageLocation": "./.yarn/cache/mute-stream-npm-3.0.0-b51769acce-bee5db5c99.zip/node_modules/mute-stream/",\
         "packageDependencies": [\
-          ["mute-stream", "npm:2.0.0"]\
+          ["mute-stream", "npm:3.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4784,16 +4717,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["string-width", [\
-      ["npm:4.2.3", {\
-        "packageLocation": "./.yarn/cache/string-width-npm-4.2.3-2c27177bae-e52c10dc3f.zip/node_modules/string-width/",\
-        "packageDependencies": [\
-          ["emoji-regex", "npm:8.0.0"],\
-          ["is-fullwidth-code-point", "npm:3.0.0"],\
-          ["string-width", "npm:4.2.3"],\
-          ["strip-ansi", "npm:6.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.2.0", {\
         "packageLocation": "./.yarn/cache/string-width-npm-7.2.0-93572222c9-42f9e82f61.zip/node_modules/string-width/",\
         "packageDependencies": [\
@@ -4898,15 +4821,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["tinyrainbow", [\
-      ["npm:3.1.0", {\
-        "packageLocation": "./.yarn/cache/tinyrainbow-npm-3.1.0-35ba47f8ae-4c2c01dde1.zip/node_modules/tinyrainbow/",\
-        "packageDependencies": [\
-          ["tinyrainbow", "npm:3.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["to-regex-range", [\
       ["npm:5.0.1", {\
         "packageLocation": "./.yarn/cache/to-regex-range-npm-5.0.1-f1e8263b00-10dda13571.zip/node_modules/to-regex-range/",\
@@ -5003,10 +4917,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["typescript", [\
-      ["patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5", {\
-        "packageLocation": "./.yarn/cache/typescript-patch-6fda4d02cf-696e1b017b.zip/node_modules/typescript/",\
+      ["patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5", {\
+        "packageLocation": "./.yarn/cache/typescript-patch-bfb0cdd3b9-22b67a18da.zip/node_modules/typescript/",\
         "packageDependencies": [\
-          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
+          ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5122,16 +5036,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["wide-align", [\
-      ["npm:1.1.5", {\
-        "packageLocation": "./.yarn/cache/wide-align-npm-1.1.5-889d77e592-d5f8027b9a.zip/node_modules/wide-align/",\
-        "packageDependencies": [\
-          ["string-width", "npm:4.2.3"],\
-          ["wide-align", "npm:1.1.5"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["wordwrap", [\
       ["npm:1.0.0", {\
         "packageLocation": "./.yarn/cache/wordwrap-npm-1.0.0-ae57a645e8-497d40beb2.zip/node_modules/wordwrap/",\
@@ -5142,16 +5046,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["wrap-ansi", [\
-      ["npm:6.2.0", {\
-        "packageLocation": "./.yarn/cache/wrap-ansi-npm-6.2.0-439a7246d8-0d64f2d438.zip/node_modules/wrap-ansi/",\
-        "packageDependencies": [\
-          ["ansi-styles", "npm:4.3.0"],\
-          ["string-width", "npm:4.2.3"],\
-          ["strip-ansi", "npm:6.0.1"],\
-          ["wrap-ansi", "npm:6.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:9.0.2", {\
         "packageLocation": "./.yarn/cache/wrap-ansi-npm-9.0.2-b66ec4013c-f3907e1ea9.zip/node_modules/wrap-ansi/",\
         "packageDependencies": [\
@@ -5276,15 +5170,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/yoctocolors-npm-2.1.2-ba5f016605-6ee42d665a.zip/node_modules/yoctocolors/",\
         "packageDependencies": [\
           ["yoctocolors", "npm:2.1.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["yoctocolors-cjs", [\
-      ["npm:2.1.3", {\
-        "packageLocation": "./.yarn/cache/yoctocolors-cjs-npm-2.1.3-968713fbd8-b2144b3880.zip/node_modules/yoctocolors-cjs/",\
-        "packageDependencies": [\
-          ["yoctocolors-cjs", "npm:2.1.3"]\
         ],\
         "linkType": "HARD"\
       }]\

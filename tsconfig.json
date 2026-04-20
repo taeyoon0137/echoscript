@@ -18,12 +18,6 @@
     "declaration": true,
     "removeComments": false,
     "sourceMap": true,
-    
-    /* Interop Constraints */
-    "allowSyntheticDefaultImports": true,
-    
-    /* Interop Constraints */
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,

@@ -10,10 +10,9 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "rootDir": "./src",
-    "baseUrl": "./src",
     "outDir": "./dist",
     "paths": {
-      "@*": ["./*"]
+      "@*": ["./src/*"]
     }
   },
   "include": ["src", "@types"],
