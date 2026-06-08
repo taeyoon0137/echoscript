@@ -2954,11 +2954,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:5.0.5", {\
-        "packageLocation": "./.yarn/cache/brace-expansion-npm-5.0.5-b81f6c30d6-f259b2ddf0.zip/node_modules/brace-expansion/",\
+      ["npm:5.0.6", {\
+        "packageLocation": "./.yarn/cache/brace-expansion-npm-5.0.6-abf39a1281-a7acf120fe.zip/node_modules/brace-expansion/",\
         "packageDependencies": [\
           ["balanced-match", "npm:4.0.4"],\
-          ["brace-expansion", "npm:5.0.5"]\
+          ["brace-expansion", "npm:5.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5088,10 +5088,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["ip-address", [\
-      ["npm:10.1.0", {\
-        "packageLocation": "./.yarn/cache/ip-address-npm-10.1.0-d5d5693401-a6979629d1.zip/node_modules/ip-address/",\
+      ["npm:10.2.0", {\
+        "packageLocation": "./.yarn/cache/ip-address-npm-10.2.0-6fea410c3e-12fec399e1.zip/node_modules/ip-address/",\
         "packageDependencies": [\
-          ["ip-address", "npm:10.1.0"]\
+          ["ip-address", "npm:10.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5831,7 +5831,7 @@ const RAW_RUNTIME_STATE =
       ["npm:10.2.5", {\
         "packageLocation": "./.yarn/cache/minimatch-npm-10.2.5-f1c8297822-19e87a931a.zip/node_modules/minimatch/",\
         "packageDependencies": [\
-          ["brace-expansion", "npm:5.0.5"],\
+          ["brace-expansion", "npm:5.0.6"],\
           ["minimatch", "npm:10.2.5"]\
         ],\
         "linkType": "HARD"\
@@ -7084,12 +7084,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["socks", [\
-      ["npm:2.8.7", {\
-        "packageLocation": "./.yarn/cache/socks-npm-2.8.7-d1d20aae19-d19366c959.zip/node_modules/socks/",\
+      ["npm:2.8.9", {\
+        "packageLocation": "./.yarn/cache/socks-npm-2.8.9-95c365bbf7-8675e6b023.zip/node_modules/socks/",\
         "packageDependencies": [\
-          ["ip-address", "npm:10.1.0"],\
+          ["ip-address", "npm:10.2.0"],\
           ["smart-buffer", "npm:4.2.0"],\
-          ["socks", "npm:2.8.7"]\
+          ["socks", "npm:2.8.9"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7100,7 +7100,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["agent-base", "npm:7.1.4"],\
           ["debug", "virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.3"],\
-          ["socks", "npm:2.8.7"],\
+          ["socks", "npm:2.8.9"],\
           ["socks-proxy-agent", "npm:8.0.5"]\
         ],\
         "linkType": "HARD"\
