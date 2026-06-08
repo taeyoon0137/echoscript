@@ -6,7 +6,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "yarn@4.13.0+sha512.5c20ba010c99815433e5c8453112165e673f1c7948d8d2b267f4b5e52097538658388ebc9f9580656d9b75c5cc996f990f611f99304a2197d4c56d21eea370e7",
+  "packageManager": "yarn@4.16.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/taeyoon0137/echoscript.git",
@@ -39,14 +39,16 @@
     "version": "yarn sync:version && yarn readme"
   },
   "devDependencies": {
-    "@lerna-lite/cli": "^5.0.0",
-    "@lerna-lite/publish": "^5.0.0",
-    "@lerna-lite/version": "^5.0.0",
+    "@lerna-lite/cli": "^5.3.0",
+    "@lerna-lite/publish": "^5.3.0",
+    "@lerna-lite/version": "^5.3.0",
     "@total-typescript/ts-reset": "^0.6.1",
-    "@types/node": "^25.6.0",
+    "@types/node": "^25.9.2",
+    "eslint": "^9",
+    "eslint-config-taeyoon": "0.2.1",
     "prettier": "^3.8.3",
-    "tsc-alias": "^1.8.16",
+    "tsc-alias": "^1.8.17",
     "typescript": "^6.0.3",
-    "zod": "^4.3.6"
+    "zod": "^4.4.3"
   }
 }

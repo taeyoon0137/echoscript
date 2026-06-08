@@ -15,14 +15,14 @@
   "devDependencies": {
     "@echoscript/core": "workspace:^",
     "@echoscript/types": "workspace:^",
-    "@rollup/plugin-commonjs": "^29.0.2",
+    "@rollup/plugin-commonjs": "^29.0.3",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^1.0.0",
     "@rollup/plugin-typescript": "^12.3.0",
     "@total-typescript/ts-reset": "^0.6.1",
-    "@yarnpkg/core": "^4.7.0",
-    "rollup": "^4.60.2",
-    "tsc-alias": "^1.8.16",
+    "@yarnpkg/core": "^4.8.0",
+    "rollup": "^4.61.1",
+    "tsc-alias": "^1.8.17",
     "tslib": "^2.8.1",
     "typescript": "^6.0.3"
   },
