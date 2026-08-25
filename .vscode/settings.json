@@ -55,5 +55,6 @@
   // Yarn pnp typescript path definition
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs"
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
+  "eslint.nodePath": ".yarn/sdks"
 }

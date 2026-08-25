@@ -1,0 +1,14 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@4.0.0/schema.json",
+  "changelog": false,
+  "commit": false,
+  "fixed": [
+    ["@echoscript/core", "@echoscript/types", "@echoscript/yarn-plugin"]
+  ],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": [],
+  "format": "prettier"
+}

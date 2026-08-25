@@ -31,17 +31,23 @@
 
 ## 개발 환경
 
-- 패키지 매니저는 Yarn Berry입니다. 루트 `packageManager`와 `.yarnrc.yml`의 `yarnPath`를 따릅니다.
+- 패키지 매니저는 Corepack이 루트 `packageManager`에 선언된 Yarn Berry 버전을 제공하도록 구성합니다. 저장소에 Yarn 바이너리를 vendoring하거나 `.yarnrc.yml`의 `yarnPath`를 사용하지 않습니다.
 - Node.js 엔진은 `package.json`의 `engines.node` 기준으로 `^22.17.0 || >=24.0.0`입니다.
 - Yarn PnP를 사용합니다. `node_modules`를 전제로 한 변경을 추가하지 않습니다.
-- 의존성을 변경하면 `package.json`, 워크스페이스 manifest, `yarn.lock`, `.pnp.cjs`, `.pnp.loader.mjs`, `.yarn/cache`, `.yarn/releases` 변경을 함께 확인합니다.
+- 의존성을 변경하면 `package.json`, 워크스페이스 manifest, `yarn.lock`, `.pnp.cjs`, `.pnp.loader.mjs`, `.yarn/cache` 변경을 함께 확인합니다.
 - `npmMinimalAgeGate` 또는 `npmPreapprovedPackages`처럼 Yarn 보안 설정을 바꿀 때는 이유와 대상 패키지를 명확히 남깁니다.
+
+### 임시 도구 호환성 제약
+
+- 2026-08-25 기준 TypeScript 7.0.2는 Yarn PnP 빌드에서 `TS2688`로 실패하므로 TypeScript는 6.0.3 계열을 유지합니다.
+- `eslint-config-taeyoon@0.2.2`가 ESLint `^9.7.0`과 TypeScript `>=4.8.4 <6.1.0`을 지원하므로 ESLint는 9.39.5, TypeScript는 6.0.3 계열을 유지합니다. `corepack yarn npm audit`의 ESLint 9 알림은 GHSA/CVE가 아닌 지원 종료 알림이며, 취약점만 검증할 때는 `--no-deprecations`를 함께 사용합니다.
+- Yarn PnP와 `eslint-config-taeyoon`이 TypeScript 7 및 ESLint 10을 지원하면 위 제약을 제거하고 `corepack yarn install --immutable`, `corepack yarn ready`, `corepack yarn npm audit --all --recursive`를 다시 검증합니다.
 
 ## Source of Truth
 
 - README의 원본은 `resources/README.preset.md`입니다. `README.md`만 직접 수정해서 끝내지 않습니다.
 - README 이미지 원본은 `resources/assets` 아래 파일입니다.
-- 루트 버전의 원본은 `lerna.json`의 `version`입니다. `package.json` 버전 동기화는 `yarn sync:version`이 담당합니다.
+- 평상시 루트 버전의 원본은 `lerna.json`의 `version`입니다. 릴리스 시에는 Changesets의 fixed 그룹이 세 워크스페이스의 다음 버전을 결정하고, `corepack yarn release:version`이 그 버전을 `lerna.json`, 루트 `package.json`, README에 동기화합니다.
 - `.echoscriptrc` JSON Schema는 `packages/types/src`의 Zod 타입과 `packages/types/scripts/schema.ts`에서 생성됩니다.
 - `packages/*/dist`는 TypeScript 빌드 결과물입니다.
 - `packages/plugin/plugin/bundle.js`는 Rollup 번들 결과물입니다.
@@ -49,7 +55,7 @@
 ## 문서 작업 기준
 
 - 문서는 한국어 또는 기존 문서가 쓰는 언어를 따릅니다. README 본문은 현재 영어를 사용합니다.
-- README 내용을 바꿀 때는 `resources/README.preset.md`를 먼저 수정한 뒤 `yarn readme`를 실행합니다.
+- README 내용을 바꿀 때는 `resources/README.preset.md`를 먼저 수정한 뒤 `corepack yarn readme`를 실행합니다.
 - 패키지 목록, 버전 배지, 이미지 경로는 README 생성 스크립트가 치환하므로 생성 결과와 원본의 관계를 깨지 않습니다.
 - 긴 생성 결과를 수동으로 복제하지 말고 원본과 생성 명령을 우선합니다.
 
@@ -57,31 +63,40 @@
 
 - TypeScript 소스는 각 패키지의 `src` 아래에서 수정합니다.
 - 타입 정의 변경이 `.echoscriptrc` 설정에 영향을 주면 `packages/types/schema/echoscriptrc.schema.json`도 재생성합니다.
-- Yarn 플러그인 런타임 동작을 바꾸면 `packages/plugin/src`를 수정하고 `yarn bundle` 또는 `yarn ready`로 `packages/plugin/plugin/bundle.js`를 갱신합니다.
+- Yarn 플러그인 런타임 동작을 바꾸면 `packages/plugin/src`를 수정하고 `corepack yarn bundle` 또는 `corepack yarn ready`로 `packages/plugin/plugin/bundle.js`를 갱신합니다.
 - 공개 패키지 경계에 영향을 주는 변경은 각 패키지의 `main`, `types`, `publishConfig`, `.npmignore` 영향을 확인합니다.
 - secret, token, credential을 저장소에 기록하지 않습니다. `.yarnrc.yml`의 npm token 설정은 환경 변수 참조 형태를 유지합니다.
 
 ## 명령어
 
-- 설치 검증: `yarn install --immutable`
-- 전체 빌드: `yarn build`
-- 배포 준비 빌드와 번들: `yarn ready`
-- 타입 패키지 빌드와 schema 생성: `yarn build:types`
-- 코어 빌드: `yarn build:core`
-- 플러그인 타입 빌드: `yarn build:plugin`
-- 플러그인 번들 생성: `yarn bundle`
-- README 재생성: `yarn readme`
-- 버전 동기화와 README 재생성: `yarn version`
-- VS Code SDK 갱신: `yarn vscode`
+- 설치 검증: `corepack yarn install --immutable`
+- Changeset 추가: `corepack yarn changeset`
+- Changeset 버전 반영: `corepack yarn release:version`
+- 전체 빌드: `corepack yarn build`
+- 배포 준비 빌드와 번들: `corepack yarn ready`
+- 타입 패키지 빌드와 schema 생성: `corepack yarn build:types`
+- 코어 빌드: `corepack yarn build:core`
+- 플러그인 타입 빌드: `corepack yarn build:plugin`
+- 플러그인 번들 생성: `corepack yarn bundle`
+- README 재생성: `corepack yarn readme`
+- 버전 동기화와 README 재생성: `corepack yarn version`
+- VS Code SDK 갱신: `corepack yarn vscode`
+
+## GitHub Release
+
+- 릴리스할 변경에는 `.changeset` 아래 Changeset 파일을 추가합니다.
+- Changeset이 포함된 커밋이 `main`에 반영되면 `.github/workflows/release.yml`이 버전 반영 커밋을 `main`에 직접 추가하고, 같은 커밋을 가리키는 lightweight `vX.Y.Z` 태그와 GitHub Release를 생성합니다.
+- 세 워크스페이스는 Changesets fixed 그룹으로 같은 버전을 유지합니다.
+- 이 파이프라인은 npm publish를 수행하지 않습니다.
 
 ## 검증 기준
 
 변경 후 가능한 범위에서 아래를 실행합니다.
 
-- 의존성, Yarn 설정, lockfile 변경: `yarn install --immutable`
-- TypeScript 소스, schema, 패키지 manifest 변경: `yarn build`
-- Yarn 플러그인 번들 동작 또는 배포 산출물 변경: `yarn ready`
-- README 원본이나 README 생성 스크립트 변경: `yarn readme`
+- 의존성, Yarn 설정, lockfile 변경: `corepack yarn install --immutable`
+- TypeScript 소스, schema, 패키지 manifest 변경: `corepack yarn build`
+- Yarn 플러그인 번들 동작 또는 배포 산출물 변경: `corepack yarn ready`
+- README 원본이나 README 생성 스크립트 변경: `corepack yarn readme`
 - 문서나 설정만 변경: `git diff --check`
 - `CLAUDE.md` 링크 변경: `test -L CLAUDE.md && test "$(readlink CLAUDE.md)" = "AGENTS.md"`
 
@@ -107,4 +122,4 @@
 
 - npm 토큰, 개인 접근 토큰, 환경 변수 값은 파일에 쓰지 않습니다.
 - 공개 README, schema URL, 플러그인 import URL을 바꿀 때는 공개 저장소 경로와 배포 사용자를 고려합니다.
-- 배포나 publish는 사용자가 명시적으로 요청한 경우에만 수행합니다.
+- 배포나 publish는 사용자가 명시적으로 요청한 경우에만 수행합니다. 자동 릴리스 파이프라인은 GitHub Release만 생성하며 npm publish를 수행하지 않습니다.

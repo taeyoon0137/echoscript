@@ -9,6 +9,7 @@
     "chrisbibby.hide-node-modules",
     "pkief.material-icon-theme",
     "arcanis.vscode-zipfs",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
   ]
 }

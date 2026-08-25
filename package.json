@@ -6,7 +6,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "yarn@4.16.0",
+  "packageManager": "yarn@4.18.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/taeyoon0137/echoscript.git",
@@ -21,8 +21,10 @@
     "node": "^22.17.0 || >=24.0.0"
   },
   "scripts": {
+    "changeset": "changeset",
     "vscode": "yarn dlx @yarnpkg/sdks vscode",
     "sync:version": "./scripts/version.sh",
+    "release:version": "./scripts/changeset_version.sh",
     "ready": "yarn build && yarn bundle",
     "build": "yarn build:types && yarn build:core && yarn build:plugin",
     "build:types": "yarn workspace @echoscript/types ready",
@@ -39,15 +41,16 @@
     "version": "yarn sync:version && yarn readme"
   },
   "devDependencies": {
-    "@lerna-lite/cli": "^5.3.0",
-    "@lerna-lite/publish": "^5.3.0",
-    "@lerna-lite/version": "^5.3.0",
+    "@changesets/cli": "^3.0.1",
+    "@lerna-lite/cli": "^5.6.1",
+    "@lerna-lite/publish": "^5.6.1",
+    "@lerna-lite/version": "^5.6.1",
     "@total-typescript/ts-reset": "^0.6.1",
-    "@types/node": "^25.9.2",
-    "eslint": "^9",
-    "eslint-config-taeyoon": "0.2.1",
-    "prettier": "^3.8.3",
-    "tsc-alias": "^1.8.17",
+    "@types/node": "^26.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-taeyoon": "0.2.2",
+    "prettier": "^3.9.6",
+    "tsc-alias": "^1.9.2",
     "typescript": "^6.0.3",
     "zod": "^4.4.3"
   }
