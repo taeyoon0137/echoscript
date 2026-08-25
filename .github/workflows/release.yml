@@ -106,6 +106,9 @@ jobs:
           corepack yarn install --immutable --check-cache
           corepack yarn ready
           corepack yarn npm audit --all --recursive --no-deprecations
+          version=$(jq -er '.version' lerna.json)
+          test -s README.md
+          grep -F "Current recent version is \`$version\`" README.md
           git diff --check
           test -L CLAUDE.md
           test "$(readlink CLAUDE.md)" = 'AGENTS.md'

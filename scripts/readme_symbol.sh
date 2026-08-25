@@ -5,6 +5,8 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
+set -euo pipefail
+
 # Define Paths
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$SCRIPT_DIR/.."
@@ -18,7 +20,7 @@ BAK_README_DIR="$ROOT_DIR/README.md.bak"
 source "$SCRIPT_DIR/utils/encode_url.sh"
 
 # Encode Symbol to Base64
-ENCODED_SYMBOL=$(base64 < "$SYMBOL_DIR")
+ENCODED_SYMBOL=$(base64 < "$SYMBOL_DIR" | tr -d '\r\n')
 
 # Inject Symbol into TEMP README
 sed "s|\${symbol}|data:image/svg+xml;base64,$(encode_shields_badge "$ENCODED_SYMBOL")|g" "$README_DIR" > "$BAK_README_DIR"
