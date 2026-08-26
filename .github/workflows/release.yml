@@ -57,24 +57,27 @@ jobs:
             echo "value=skip" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Set up Node.js
+      - name: Set up mise
         if: steps.mode.outputs.value == 'version'
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
         with:
-          node-version: 24
+          version: 2026.8.14
 
-      - name: Activate Corepack
+      - name: Verify mise toolchain
         if: steps.mode.outputs.value == 'version'
         shell: bash
         run: |
           set -euo pipefail
-          corepack enable
-          corepack install
-          corepack yarn --version
+          package_manager=$(jq -er '.packageManager' package.json)
+
+          test "$(mise --version | cut -d ' ' -f 1)" = '2026.8.14'
+          test "$(node --version)" = 'v24.15.0'
+          test "$(yarn --version)" = '4.18.0'
+          test "$package_manager" = "yarn@$(yarn --version)"
 
       - name: Install dependencies
         if: steps.mode.outputs.value == 'version'
-        run: corepack yarn install --immutable --check-cache
+        run: yarn install --immutable --check-cache
 
       - name: Validate release plan
         if: steps.mode.outputs.value == 'version'
@@ -85,7 +88,7 @@ jobs:
           status_file="$RUNNER_TEMP/changeset-status.json"
           notes_file="$RUNNER_TEMP/release-notes.md"
 
-          corepack yarn changeset status --output "$status_file"
+          yarn changeset status --output "$status_file"
           jq -e '.releases | length > 0' "$status_file" >/dev/null
 
           {
@@ -96,16 +99,16 @@ jobs:
 
       - name: Apply release versions
         if: steps.mode.outputs.value == 'version'
-        run: corepack yarn release:version
+        run: yarn release:version
 
       - name: Verify release state
         if: steps.mode.outputs.value == 'version'
         shell: bash
         run: |
           set -euo pipefail
-          corepack yarn install --immutable --check-cache
-          corepack yarn ready
-          corepack yarn npm audit --all --recursive --no-deprecations
+          yarn install --immutable --check-cache
+          yarn ready
+          yarn npm audit --all --recursive --no-deprecations
           version=$(jq -er '.version' lerna.json)
           test -s README.md
           grep -F "Current recent version is \`$version\`" README.md

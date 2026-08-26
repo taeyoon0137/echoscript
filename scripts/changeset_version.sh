@@ -8,7 +8,7 @@ ROOT_DIR="$SCRIPT_DIR/.."
 cd "$ROOT_DIR"
 
 "$SCRIPT_DIR/utils/install_jq.sh"
-corepack yarn changeset version
+yarn changeset version
 
 VERSION=$(jq -er '.version' packages/types/package.json)
 PACKAGE_MANIFESTS=(
@@ -31,6 +31,6 @@ jq --arg version "$VERSION" '.version = $version' lerna.json > "$TEMP_LERNA"
 mv "$TEMP_LERNA" lerna.json
 trap - EXIT
 
-corepack yarn sync:version
-corepack yarn install
-corepack yarn readme
+yarn sync:version
+yarn install
+yarn readme
