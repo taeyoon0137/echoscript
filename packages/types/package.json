@@ -17,12 +17,12 @@
   },
   "devDependencies": {
     "@total-typescript/ts-reset": "^0.6.1",
-    "@types/node": "^26.3.0",
-    "prettier": "^3.9.6",
-    "tsc-alias": "^1.9.2",
-    "tsx": "^4.23.12",
+    "@types/node": "^26.6.6",
+    "prettier": "^3.9.10",
+    "tsc-alias": "^1.9.10",
+    "tsx": "^4.23.15",
     "typescript": "^6.0.3",
-    "zod": "^4.4.3",
+    "zod": "^4.6.7",
     "zod-to-json-schema": "^3.25.2"
   },
   "peerDependencies": {
