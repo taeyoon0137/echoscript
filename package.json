@@ -25,7 +25,7 @@
     "vscode": "yarn dlx @yarnpkg/sdks vscode",
     "sync:version": "./scripts/version.sh",
     "release:version": "./scripts/changeset_version.sh",
-    "ready": "yarn build && yarn bundle",
+    "ready": "yarn build && yarn bundle && yarn workspace @echoscript/yarn-plugin test:bundle && yarn test:tooling",
     "build": "yarn build:types && yarn build:core && yarn build:plugin",
     "build:types": "yarn workspace @echoscript/types ready",
     "build:core": "yarn workspace @echoscript/core build",
@@ -38,13 +38,11 @@
     "readme:symbol": "./scripts/readme_symbol.sh",
     "readme:version": "./scripts/readme_version.sh",
     "readme:format": "prettier --write \"./README.md\" --log-level silent",
-    "version": "yarn sync:version && yarn readme"
+    "version": "yarn sync:version && yarn readme",
+    "test:tooling": "node scripts/test-tooling.cjs"
   },
   "devDependencies": {
     "@changesets/cli": "^3.0.3",
-    "@lerna-lite/cli": "^5.8.0",
-    "@lerna-lite/publish": "^5.8.0",
-    "@lerna-lite/version": "^5.8.0",
     "@total-typescript/ts-reset": "^0.6.1",
     "@types/node": "^26.6.6",
     "eslint": "^9.39.5",
@@ -53,5 +51,8 @@
     "tsc-alias": "^1.9.10",
     "typescript": "^6.0.3",
     "zod": "^4.6.7"
+  },
+  "resolutions": {
+    "minimatch@npm:^10.2.2": "npm:11.0.1"
   }
 }

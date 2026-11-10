@@ -7,21 +7,18 @@
     "access": "public"
   },
   "scripts": {
-    "bundle": "rollup --silent --config ./rollup.config.js --bundleConfigAsCjs",
+    "bundle": "node ./scripts/bundle.mjs",
     "build": "yarn build:clear && yarn build:types",
     "build:clear": "rm -rf ./dist && mkdir -p ./dist",
-    "build:types": "tsc -p tsconfig.json && tsc-alias"
+    "build:types": "tsc -p tsconfig.json && tsc-alias",
+    "test:bundle": "node ./scripts/test-bundle.cjs"
   },
   "devDependencies": {
     "@echoscript/core": "workspace:^",
     "@echoscript/types": "workspace:^",
-    "@rollup/plugin-commonjs": "^29.0.3",
-    "@rollup/plugin-node-resolve": "^16.0.3",
-    "@rollup/plugin-terser": "^1.0.2",
-    "@rollup/plugin-typescript": "^12.3.1",
     "@total-typescript/ts-reset": "^0.6.1",
     "@yarnpkg/core": "^4.9.1",
-    "rollup": "^4.68.0",
+    "esbuild": "^0.28.2",
     "tsc-alias": "^1.9.10",
     "tslib": "^2.9.1",
     "typescript": "^6.0.3"

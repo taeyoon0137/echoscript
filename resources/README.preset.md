@@ -40,9 +40,6 @@
   <a href="https://eslint.org/">
     <img src="https://img.shields.io/badge/eslint-%234B32C3?&logo=eslint&logoColor=%23FFFFFF" />
   </a>
-  <a href="https://github.com/lerna-lite/lerna-lite">
-    <img src="https://img.shields.io/badge/lerna-%239333EA?&logo=lerna&logoColor=%23FFFFFF" />
-  </a>
   <br/>
   <!-- Working Workspaces or IDE -->
   <a href="https://code.visualstudio.com/">

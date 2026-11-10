@@ -38,6 +38,9 @@
 - 의존성을 변경하면 `package.json`, 워크스페이스 manifest, `yarn.lock`, `.pnp.cjs`, `.pnp.loader.mjs`, `.yarn/cache` 변경을 함께 확인합니다.
 - `npmMinimalAgeGate` 또는 `npmPreapprovedPackages`처럼 Yarn 보안 설정을 바꿀 때는 이유와 대상 패키지를 명확히 남깁니다.
 
+- 릴리스는 Changesets를 사용하며 Lerna CLI 의존성은 사용하지 않습니다. 기존 버전 동기화 호환을 위해 `lerna.json`은 유지합니다.
+- TypeScript-ESLint의 `minimatch@^10.2.2`는 GHSA-g3hv-75wg-m249 대응으로 `11.0.1`에 한정 override합니다. 상위 패키지가 수정 버전을 지원하면 override를 제거하고 `yarn test:tooling` 및 전체 audit를 다시 검증합니다.
+
 ### mise 도구 체인 관리
 
 - `mise.lock`을 커밋하고 로컬과 CI에서 `mise install --locked`로 도구 다운로드 URL과 제공되는 체크섬을 검증합니다.
@@ -57,7 +60,7 @@
 - 평상시 루트 버전의 원본은 `lerna.json`의 `version`입니다. 릴리스 시에는 Changesets의 fixed 그룹이 세 워크스페이스의 다음 버전을 결정하고, `yarn release:version`이 그 버전을 `lerna.json`, 루트 `package.json`, README에 동기화합니다.
 - `.echoscriptrc` JSON Schema는 `packages/types/src`의 Zod 타입과 `packages/types/scripts/schema.ts`에서 생성됩니다.
 - `packages/*/dist`는 TypeScript 빌드 결과물입니다.
-- `packages/plugin/plugin/bundle.js`는 Rollup 번들 결과물입니다.
+- `packages/plugin/plugin/bundle.js`는 esbuild 번들 결과물입니다.
 
 ## 문서 작업 기준
 
@@ -86,6 +89,7 @@
 - 코어 빌드: `yarn build:core`
 - 플러그인 타입 빌드: `yarn build:plugin`
 - 플러그인 번들 생성: `yarn bundle`
+- 플러그인 번들 동작 검증: `yarn workspace @echoscript/yarn-plugin test:bundle`
 - README 재생성: `yarn readme`
 - 버전 동기화와 README 재생성: `yarn version`
 - VS Code SDK 갱신: `yarn vscode`
